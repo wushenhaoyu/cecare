@@ -1,0 +1,22 @@
+{
+  "modes": [
+    {
+      "title": "pages/zhuche/zhuche",
+      "page": "pages/zhuche/zhuche",
+      "launchMode": "common",
+      "pageQuery": ""
+    },
+    {
+      "title": "pages/volunteer/volunteer",
+      "page": "pages/volunteer/volunteer",
+      "launchMode": "common",
+      "pageQuery": ""
+    },
+    {
+      "title": "pages/first/first",
+      "page": "pages/first/first",
+      "launchMode": "common",
+      "pageQuery": ""
+    }
+  ]
+}

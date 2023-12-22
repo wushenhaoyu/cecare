@@ -1,0 +1,8 @@
+<view class='page-container-classname'>
+                <view ref='saveChildRef0'>
+  这是登录界面
+</view><input name='ss' placeholder='请输入您的手机号码' onInput='keyInput2'>
+</input><btn onTap='antmoveAction' data-antmove-tap='denglu'>
+  登录
+</btn>
+            </view>

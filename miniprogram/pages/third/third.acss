@@ -1,0 +1,178 @@
+.up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.box1 {
+    width: 100%;
+    height: 22vh;
+    /* border-bottom-right-radius: 9%;
+    border-bottom-left-radius: 9%; */
+    background-color: rgb(60, 152, 250);
+    /* background: linear-gradient(to bottom, rgb(0, 111, 252), rgba(0, 175, 230, 0.333)); */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 80rpx;
+    color: white;
+    z-index: 100;
+}
+
+.box2 {
+    width: 80%;
+    height: 180rpx;
+    background-color: white;
+    box-shadow: rgba(12, 12, 12, 0.03) 0px 2px 15px -5px;
+    border-radius: 12rpx;
+    display: flex;
+    font-weight: 300rpx;
+    align-items: center;
+    font-size: 50rpx;
+}
+
+.box3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -80rpx;
+    z-index: 200;
+}
+
+.box4 {
+    width: 80%;
+    height: 180rpx;
+    background-color: white;
+    box-shadow: rgba(12, 12, 12, 0.03) 0px 2px 15px -5px;
+    border-radius: 12rpx;
+    margin-bottom: 5vh;
+    display: flex;
+    font-weight: 300rpx;
+    align-items: center;
+    font-size: 50rpx;
+}
+
+.box5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box6 {
+    width: 90%;
+    display: flex;
+    height: 1050rpx;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 0px rgba(0, 175, 230);
+    border: 1rpx solid gray;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 3%;
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
+    padding-bottom: 50rpx;
+    background-color: white;
+    overflow: hidden;
+}
+
+.box8 {
+    width: 100%;
+    height: 900rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box9 {
+    height: 150rpx;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.imagebox {
+    border-radius: 50%;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    width: 100rpx;
+    height: 100rpx;
+}
+
+movable-view {
+    z-index: 999;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    background: white;
+    color: #fff;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4rpx solid rgba(63, 162, 253, 0.7);
+}
+
+movable-area {
+    pointer-events: none;
+    position: absolute;
+    top: 0rpx;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.size {
+    padding-top: 15rpx;
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.toNavigation {
+    height: 52rpx;
+    width: 119rpx;
+    color: white;
+    background-color: rgba(19, 124, 250);
+    border-bottom-right-radius: 100rpx;
+    border-top-right-radius: 100rpx;
+    font-size: 33rpx;
+    display: flex;
+    justify-items: center;
+    position: fixed;
+}
+
+.listFrirend {
+    display: block !important;
+    margin-top: -30rpx !important;
+}
+
+.reaserchBar {
+    height: 75rpx;
+    width: 84%;
+    border-radius: 100rpx;
+    margin-top: 20rpx;
+    position: fixed;
+    display: flex;
+    background-color: white;
+}
+
+.research {
+    width: 50rpx;
+    height: 50rpx;
+    margin-top: 37rpx;
+    margin-left: -542rpx;
+    position: fixed;
+    z-index: 1000000;
+}
+
+.buttonFriends {
+    background-color: rgb(19, 124, 250);
+    width: 152rpx !important;
+    height: 100% !important;
+    color: white;
+    border-top-right-radius: 100rpx;
+    border-bottom-right-radius: 100rpx;
+}

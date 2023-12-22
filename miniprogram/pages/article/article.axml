@@ -1,0 +1,96 @@
+<view class='page-container-classname'>
+                <view class='head-bar' style='height: {{barInfo.barH}}px; background-color: rgb(60, 152, 250); padding-top: {{barInfo.barTop}}px;width: 100%;position: fixed;' ref='saveChildRef0'>
+  <view style='height: {{barInfo.barBtnH}}px; line-height: {{barInfo.barBtnH}}px; ' class='up'>
+    <view style="width:5%">
+    </view>
+    <view style='margin-left: 3vh; font-size: 28rpx;'>
+      隐私协议
+    </view>
+  </view>
+</view><view style='height: {{barInfo.barH}}px;'>
+</view><view style='height: auto;width: 100%;display: flex;align-items: center;justify-content: center;flex-direction: column;'>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 32rpx;font-weight: 600;'>
+    欢迎使用怡心守护
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text1}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text2}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text3}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text4}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text5}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text6}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text7}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text8}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text9}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text10}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text11}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text12}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text13}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text14}}
+  </view>
+  <text style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text15}}  </text>  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text16}}
+  </view>
+  <text style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text17}}  </text>  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text18}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text19}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text20}}
+  </view>
+  <text style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text21}}  </text>  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text22}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text23}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text24}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text25}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text26}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text27}}
+  </view>
+  <view style='width:90%;line-height:54rpx;color: black;margin-top: 3vh;font-size: 27rpx;font-weight: 600;'>
+    {{text28}}
+  </view>
+  <view style='height: 10vh;'>
+  </view>
+</view>
+            </view>

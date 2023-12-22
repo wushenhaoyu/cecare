@@ -1,0 +1,53 @@
+<view class='page-container-classname'>
+                <view class='head-bar' style='height: {{barInfo.barH}}px; background-color: rgb(60, 152, 250); padding-top: {{barInfo.barTop}}px;width: 100%;' ref='saveChildRef0'>
+  <view style='height: {{barInfo.barBtnH}}px; line-height: {{barInfo.barBtnH}}px; ' class='up'>
+    <view style="width:5%">
+    </view>
+    <view style='margin-left: 1vh; font-size: 28rpx;'>
+      急救处理
+    </view>
+  </view>
+</view><view style='height: 77vh;width: 100%;'>
+  <view style='height: 9vh;width: 234rpx;margin-left: 0vh;display: flex;align-items: center;justify-content: space-evenly;'>
+    <view style='height: auto;width: auto;'>
+      <image src='/image/noBreathicon.png' mode='heightFix' style='height: 4vh;'>
+      </image>
+    </view>
+    <view style='font-size: 42rpx;font-weight: 600;'>
+      无呼吸
+    </view>
+  </view>
+  <view style='display: flex;justify-content: center;align-items: flex-end;width: 100%;'>
+    <view style='font-size: 60rpx;width: auto;'>
+      3.胸部按压
+    </view>
+    <view style='font-size: 40rpx;margin-left: 10rpx;'>
+      找到正确位置按压
+    </view>
+  </view>
+  <view style='display: flex;justify-content: center;width: 100%;'>
+    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/6ACD609D204CFCAB57E0EB1D1AF089C1.gif?expire_at=1703087715&er_sign=29d8c8c8fda882c8d8a7f6f9e7985848' mode='heightFix' style='height:18vh;margin-top: 2vh;'>
+    </image>
+  </view>
+  <view style='display: flex;justify-content: center;width: 100%;margin-top: 0vh;'>
+    <view style='font-size: 60rpx;width: 80%;'>
+      正确速度深度按压
+    </view>
+  </view>
+  <view style='display: flex;justify-content: center;width: 100%;'>
+    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/0605071FCDEF804EF4B6270C57D773D9.gif?expire_at=1703087728&er_sign=05ec085a608aced2134a5045498824db' mode='heightFix' style='height:18vh;margin-top: 2vh;'>
+    </image>
+  </view>
+  <view style='display: flex;justify-content: center;width: 100%;'>
+    <image src='/image/nextfirst.png' mode='widthFix' style='width: 80%;margin-top: 0vh;' onTap='antmoveAction' data-antmove-tap='toNavigate'>
+    </image>
+  </view>
+</view><view style='position: fixed;bottom: 0rpx;z-index: 999;'>
+  <scroll-view scroll-x=" " class='bg-white padding response cu-steps steps-bottom' scroll-into-view='scroll-{{scroll}}' scroll-with-animation=" ">
+    <view class="cu-item {{index>scroll?'':'text-blue'}} padding-lr-xl" a:for='{{10}}' a:key=" " id='scroll-{{index}}' ref-numbers='{{10}}'>
+      步骤 {{index + 1}}      <text class='num' data-index='{{index + 1}}'>
+      </text>
+    </view>
+  </scroll-view>
+</view>
+            </view>

@@ -1,0 +1,50 @@
+<view class='page-container-classname'>
+                <view class='head-bar' style='height: {{barInfo.barH}}px; background-color: rgb(60, 152, 250); padding-top: {{barInfo.barTop}}px;width: 100%;' ref='saveChildRef0'>
+  <view style='height: {{barInfo.barBtnH}}px; line-height: {{barInfo.barBtnH}}px; ' class='up'>
+    <view style="width:5%">
+    </view>
+    <view style='margin-left: 1vh; font-size: 28rpx;'>
+      急救处理
+    </view>
+  </view>
+</view><view style='height: 77vh;width: 100%;'>
+  <view style='height: 9vh;width: 234rpx;margin-left: 0vh;display: flex;align-items: center;justify-content: space-evenly;'>
+    <view style='height: auto;width: auto;'>
+      <image src='/image/noBreathicon.png' mode='heightFix' style='height: 4vh;'>
+      </image>
+    </view>
+    <view style='font-size: 42rpx;font-weight: 600;'>
+      无呼吸
+    </view>
+  </view>
+  <view style='display: flex;justify-content: center;width: 100%;'>
+    <view style='font-size: 60rpx;width: 80%;'>
+      1.清理口腔异物
+    </view>
+  </view>
+  <view style='display: flex;justify-content: center;width: 100%;'>
+    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/E7A1D08B88B3AB290ABE0190D82F6558.gif?expire_at=1703087600&er_sign=0a39a34118a852791fb46800c06de311' mode='heightFix' style='height:18vh;margin-top: 2vh;'>
+    </image>
+  </view>
+  <view style='display: flex;justify-content: center;width: 100%;margin-top: 0vh;'>
+    <view style='font-size: 60rpx;width: 80%;'>
+      2.放平患者
+    </view>
+  </view>
+  <view style='display: flex;justify-content: center;width: 100%;'>
+    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/0386B56A9C8945DFFF96F29D3CF37D18.gif?expire_at=1703087580&er_sign=541e41d1b99b8f28096b26585796d657' mode='heightFix' style='height:18vh;margin-top: 2vh;'>
+    </image>
+  </view>
+  <view style='display: flex;justify-content: center;width: 100%;'>
+    <image src='/image/nextfirst.png' mode='widthFix' style='width: 80%;margin-top: 0vh;' onTap='antmoveAction' data-antmove-tap='toNavigate1'>
+    </image>
+  </view>
+</view><view style='position: fixed;bottom: 0rpx;z-index: 999;'>
+  <scroll-view scroll-x=" " class='bg-white padding response cu-steps steps-bottom' scroll-into-view='scroll-{{scroll}}' scroll-with-animation=" ">
+    <view class="cu-item {{index>scroll?'':'text-blue'}} padding-lr-xl" a:for='{{10}}' a:key=" " id='scroll-{{index}}' ref-numbers='{{10}}'>
+      步骤 {{index + 1}}      <text class='num' data-index='{{index + 1}}'>
+      </text>
+    </view>
+  </scroll-view>
+</view>
+            </view>

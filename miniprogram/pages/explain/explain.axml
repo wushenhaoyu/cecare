@@ -1,0 +1,123 @@
+<view class='page-container-classname'>
+                <view class='head-bar' style='height: {{barInfo.barH}}px; background-color: rgb(60, 152, 250); padding-top: {{barInfo.barTop}}px;width: 100%;position:fixed;top:0rpx!important;width: 750rpx;z-index: 999;' ref='saveChildRef0'>
+  <view style='height: {{barInfo.barBtnH}}px; line-height: {{barInfo.barBtnH}}px; ' class='up'>
+    <view style="width:5%">
+    </view>
+    <view style='margin-left: 1vh;'>
+      急救处理
+    </view>
+  </view>
+</view><view style='height:{{barInfo.barH}}px;width: 100%;'>
+</view><view style='width: 100%;height: 21vh;display: flex;align-content: center;justify-content: center;flex-direction: column;padding-left: 2vh;padding-right: 2vh;'>
+  <view style='display: flex;justify-content: center;font-size: 4vh;'>
+    1.添加桌面
+  </view>
+  <view style='margin-top:1vh;font-size: 3vh;'>
+    点击右上角菜单，点击添加到桌面。以后直接在手机桌面上打开
+  </view>
+</view><view style='display: flex;align-content: center;justify-content: center;height: 52vh;'>
+  <image src='https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/%E8%AF%B4%E6%98%8E%E4%B9%A6/%E5%9B%BE%E7%89%8717.png?sign=f733e0326231e7c5d54e22ae27fc4e2b&t=1655732315' mode='heightFix' style='height: 50vh;'>
+  </image>
+</view><view style='display: flex;align-content: center;justify-content: center;height: 52vh;'>
+  <image src='https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/%E8%AF%B4%E6%98%8E%E4%B9%A6/%E5%9B%BE%E7%89%877.png?sign=b80948946010c939a1bb68c374a958fa&t=1655732351' mode='heightFix' style='height: 50vh;'>
+  </image>
+</view><view style='width: 100%;height: 23vh;display: flex;align-content: center;justify-content: center;flex-direction: column;padding-left: 2vh;padding-right: 2vh;'>
+  <view style='display: flex;justify-content: center;font-size: 4vh;'>
+    2.注册与登录
+  </view>
+  <view style='margin-top:1vh;font-size: 3vh;'>
+    （1）点击右下角“个人中心”
+  </view>
+  <view style='margin-top:0vh;font-size: 3vh;'>
+    （2）点击左上角“注册”进入注册界面
+  </view>
+</view><view style='display: flex;align-content: center;justify-content: center;height: 52vh;'>
+  <image src='https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/%E8%AF%B4%E6%98%8E%E4%B9%A6/%E5%9B%BE%E7%89%8716.png?sign=62d606dd0b8f3e7a8182e6691cd03116&t=1655732410' mode='heightFix' style='height: 50vh;'>
+  </image>
+</view><view style='width: 100%;height: 23vh;display: flex;align-content: center;justify-content: center;flex-direction: column;padding-left: 2vh;padding-right: 2vh;'>
+  <view style='display: flex;justify-content: center;font-size: 4vh;'>
+    2.注册与登录
+  </view>
+  <view style='margin-top:1vh;font-size: 3vh;'>
+    （3）按照提示信息点击确认
+  </view>
+  <view style='margin-top:0vh;font-size: 3vh;'>
+    （4）点击左上角返回
+  </view>
+  <view style='margin-top:0vh;font-size: 3vh;'>
+    （5）点击登录，输入信息
+  </view>
+</view><view style='display: flex;align-content: center;justify-content: center;height: 52vh;'>
+  <image src='https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/%E8%AF%B4%E6%98%8E%E4%B9%A6/%E5%9B%BE%E7%89%879.png?sign=dc169c0aca7fbdbf75d5d3612fe3bfc9&t=1655732449' mode='heightFix' style='height: 50vh;'>
+  </image>
+</view><view style='width: 100%;height: 17vh;display: flex;align-content: center;justify-content: center;flex-direction: column;padding-left: 2vh;padding-right: 2vh;'>
+  <view style='display: flex;justify-content: center;font-size: 4vh;'>
+    3.填写健康档案
+  </view>
+  <view style='margin-top:1vh;font-size: 3vh;'>
+    （1）点击“个人档案”图标
+  </view>
+</view><view style='display: flex;align-content: center;justify-content: center;height: 52vh;'>
+  <image src='https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/%E8%AF%B4%E6%98%8E%E4%B9%A6/%E5%9B%BE%E7%89%8710.png?sign=da84826cc45ba3131451fc6122f4d130&t=1655733277' mode='heightFix' style='height: 50vh;'>
+  </image>
+</view><view style='width: 100%;height: 26vh;display: flex;align-content: center;justify-content: center;flex-direction: column;padding-left: 2vh;padding-right: 2vh;'>
+  <view style='display: flex;justify-content: center;font-size: 4vh;'>
+    3.填写健康档案
+  </view>
+  <view style='margin-top:1vh;font-size: 3vh;'>
+    （2）请如实填写个人信息（我们将保护您的隐私不受侵犯，所有的信息将用于急救）
+  </view>
+</view><view style='display: flex;align-content: center;justify-content: center;height: 52vh;'>
+  <image src='https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/%E8%AF%B4%E6%98%8E%E4%B9%A6/%E5%9B%BE%E7%89%8711.png?sign=1b7638fd93b3f632d931bf92b43d43c5&t=1655733348' mode='heightFix' style='height: 50vh;'>
+  </image>
+</view><view style='width: 100%;height: 17vh;display: flex;align-content: center;justify-content: center;flex-direction: column;padding-left: 2vh;padding-right: 2vh;'>
+  <view style='display: flex;justify-content: center;font-size: 4vh;'>
+    4.添加紧急联系人
+  </view>
+  <view style='margin-top:1vh;font-size: 3vh;'>
+    （1）点击“紧急联系人”图标
+  </view>
+</view><view style='display: flex;align-content: center;justify-content: center;height: 52vh;'>
+  <image src='https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/%E8%AF%B4%E6%98%8E%E4%B9%A6/%E5%9B%BE%E7%89%8718.png?sign=35431698379b13ac152697db71d7608f&t=1655733744' mode='heightFix' style='height: 50vh;'>
+  </image>
+</view><view style='width: 100%;height: 24vh;display: flex;align-content: center;justify-content: center;flex-direction: column;padding-left: 2vh;padding-right: 2vh;'>
+  <view style='display: flex;justify-content: center;font-size: 4vh;'>
+    4.添加联系人
+  </view>
+  <view style='margin-top:1vh;font-size: 3vh;'>
+    （2）点击右下方”管理“
+  </view>
+  <view style='margin-top:0vh;font-size: 3vh;'>
+    （3）如实填写相关信息
+  </view>
+  <view style='margin-top:0vh;font-size: 3vh;'>
+    （4）点击确认，返回
+  </view>
+</view><view style='display: flex;align-content: center;justify-content: center;height: 52vh;'>
+  <image src='https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/%E8%AF%B4%E6%98%8E%E4%B9%A6/%E5%9B%BE%E7%89%8712.png?sign=fe234b5dbcd835f8aaa0066498024286&t=1655733523' mode='heightFix' style='height: 50vh;'>
+  </image>
+</view><view style='width: 100%;height: 35vh;display: flex;align-content: center;justify-content: center;flex-direction: column;padding-left: 2vh;padding-right: 2vh;'>
+  <view style='display: flex;justify-content: center;font-size: 4vh;'>
+    5.呼救按钮使用
+  </view>
+  <view style='margin-top:1vh;font-size: 3vh;'>
+    （1）身体不适点击红色急救按钮，向医院和紧急联系人和志愿者发送求救
+  </view>
+  <view style='margin-top:0vh;font-size: 3vh;'>
+    （2）点击“急救处理”进行急救
+  </view>
+</view><view style='display: flex;align-content: center;justify-content: center;height: 52vh;'>
+  <image src='https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/%E8%AF%B4%E6%98%8E%E4%B9%A6/%E5%9B%BE%E7%89%8713.png?sign=9d2a84d1eb97eb838ab545a993374694&t=1655733559' mode='heightFix' style='height: 50vh;'>
+  </image>
+</view><view style='width: 100%;height: 22vh;display: flex;align-content: center;justify-content: center;flex-direction: column;padding-left: 2vh;padding-right: 2vh;'>
+  <view style='display: flex;justify-content: center;font-size: 4vh;'>
+    5.急救科普
+  </view>
+  <view style='margin-top:1vh;font-size: 3vh;'>
+    （1）闲暇之余的学习可能在关键时刻救你一命
+  </view>
+</view><view style='display: flex;align-content: center;justify-content: center;height: 52vh;'>
+  <image src='https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/%E8%AF%B4%E6%98%8E%E4%B9%A6/%E5%9B%BE%E7%89%8714.png?sign=f039b7208b09a3c44fe8d80c1ec9c338&t=1655733585' mode='heightFix' style='height: 50vh;'>
+  </image>
+</view>
+            </view>

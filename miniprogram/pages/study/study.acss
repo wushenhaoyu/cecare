@@ -1,0 +1,152 @@
+.up {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box1 {
+    position: relative;
+    top: -20vh;
+    z-index: 2;
+    margin-top: 20rpx;
+    margin: 24rpx;
+    padding: 24rpx;
+    border-radius: 12rpx;
+    box-shadow: rgba(12, 12, 12, 0.03) 0px 2px 15px -5px;
+    background-color: white;
+    color: black;
+    box-sizing: border-box;
+}
+
+.box3 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #f7f7f7;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.box5 {
+    display: block;
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #999999 !important;
+    font-weight: 300;
+}
+
+.box6 {
+    float: right;
+    min-width: 80rpx;
+    text-align: center;
+    display: block;
+}
+
+.box7 {
+    position: relative;
+    top: -19vh;
+    margin: 24rpx;
+    padding: 24rpx;
+    border-radius: 12rpx;
+    box-shadow: rgba(12, 12, 12, 0.03) 0px 2px 15px -5px;
+    background-color: white;
+    color: black;
+    box-sizing: border-box;
+    display: block;
+}
+
+.box8 {
+    width: 49%;
+    display: block;
+    padding: 24rpx 0 20rpx;
+    text-align: center;
+}
+
+.arrow {
+    margin: auto;
+    margin-right: 30rpx;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #999;
+    border-right: 2px solid #999;
+    transform: rotate(45deg);
+}
+
+.line {
+    border-left: 5rpx solid rgb(60, 152, 250);
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+
+.info_name {
+    display: inline-block;
+    height: 45rpx;
+    line-height: 45rpx;
+    margin-right: 20rpx;
+    color: #333333;
+    font-size: 18px;
+}
+
+.info_lv {
+    margin-top: 8rpx;
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    padding: 5rpx 8rpx;
+    overflow: hidden;
+    border-radius: 10rpx !important;
+    background-color: rgb(60, 152, 250);
+    color: white;
+}
+
+view {
+    display: block;
+}
+
+.imageKepu {
+    width: 614rpx;
+    height: 20vh;
+    border-radius: 12rpx;
+    overflow: hidden;
+}
+
+.imagePu {
+    float: right;
+    width: 13vh;
+    height: 9vh;
+}
+
+.size {
+    padding-top: 15rpx;
+    width: 100rpx;
+    height: 100rpx;
+}
+
+movable-view {
+    z-index: 999;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    background: white;
+    color: #fff;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4rpx solid rgba(63, 162, 253, 0.7);
+}
+
+movable-area {
+    pointer-events: none;
+    position: absolute;
+    top: 0rpx;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}

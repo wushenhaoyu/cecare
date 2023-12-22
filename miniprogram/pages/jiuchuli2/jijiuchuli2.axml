@@ -1,0 +1,29 @@
+<view class='page-container-classname'>
+                <view class='head-bar' style='height: {{barInfo.barH}}px; background-color: rgb(60, 152, 250); padding-top: {{barInfo.barTop}}px;width: 100%;' ref='saveChildRef0'>
+  <view style='height: {{barInfo.barBtnH}}px; line-height: {{barInfo.barBtnH}}px; ' class='up'>
+    <view style="width:5%">
+    </view>
+    <view style='margin-left: 3vh; font-size: 42rpx;'>
+      急救处理
+    </view>
+  </view>
+</view><view style='width: 100%;height: 10vh;display: flex;padding-left: 4vh;margin-top: 5vh;'>
+  <view style='color:rgb(91, 155, 213);font-size: 122rpx;font-weight: 73rpx;margin-left: 2vh;margin-right: 4vh;'>
+    患者
+  </view>
+</view><view style='width: 100%;height: 10vh;display: flex;padding-left: 4vh;'>
+  <view style='color:rgb(91, 155, 213);font-size: 122rpx;font-weight: 73rpx;margin-left: 2vh;margin-right: 4vh;'>
+    是否清醒
+  </view>
+</view><view style='width: 100%;height: 10vh;display: flex;padding-left: 4vh;'>
+  <view style='color:rgb(91, 155, 213);font-size: 122rpx;font-weight: 73rpx;margin-left: 2vh;margin-right: 4vh;'>
+    有呼吸？
+  </view>
+</view><view style='margin-top: 10vh;height: 10vh;width: 100%;display: flex;align-items: center;justify-content: center;'>
+  <image src='/image/select1.png' style='height: 14vh;width: 80%;' onTap='antmoveAction' data-antmove-tap='yes'>
+  </image>
+</view><view style='margin-top: 7vh;height: 10vh;width: 100%;display: flex;align-items: center;justify-content: center;'>
+  <image src='/image/select2.png' style='height: 14vh;width: 80%;' onTap='antmoveAction' data-antmove-tap='toNavigate'>
+  </image>
+</view>
+            </view>

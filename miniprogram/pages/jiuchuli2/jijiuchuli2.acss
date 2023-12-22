@@ -1,0 +1,14 @@
+.up {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    margin-left: 30rpx;
+    width: 12px;
+    height: 12px;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    transform: rotate(45deg);
+}

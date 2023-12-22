@@ -1,0 +1,115 @@
+<view class='page-container-classname' >
+                <view a:if='{{!flagFalse}}' class='head-bar' style='height: {{barInfo.barH}}px; background-color: rgb(60, 152, 250); padding-top: {{barInfo.barTop}}px;' ref='saveChildRef0'>
+  <view style='height: {{barInfo.barBtnH}}px; line-height: {{barInfo.barBtnH}}px; ' class='up'>
+    急救电话
+  </view>
+</view>
+<view a:if='{{!flagFalse}}' style='width: 750rpx; height: 1006rpx; position: fixed; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box; left: 1rpx; top: 292rpx'>
+  <custom-swiper autoplay='flagTrue' circular='false' interval='{{2000}}' style='width:20%,height: 100%;display: flex;align-items: center;justify-content: center;'>
+    <custom-swiper-item style='width: 650rpx; height: 600rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx'>
+      <image src='/image/roket.jpg'  style='border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center; height: 471rpx; width: 462rpx; box-sizing: border-box; left: 82rpx; top: 0rpx; position: relative'>
+      </image>
+      <view style='width: 600rpx; height: 68rpx; display: block; box-sizing: border-box;display: flex;align-items: center;justify-content: center;margin-top: 4vh;color: rgb(121, 92, 95);font-size:30rpx;'>
+        一键急救，邻里互助
+      </view>
+    </custom-swiper-item>
+    <custom-swiper-item style='width: 650rpx; height: 600rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx'>
+      <image src='/image/map.jpg' style='border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center; height: 471rpx; width: 462rpx; box-sizing: border-box; left: 82rpx; top: 0rpx; position: relative'>
+      </image>
+      <view style='width: 600rpx; height: 68rpx; display: block; box-sizing: border-box;display: flex;align-items: center;justify-content: center;margin-top: 4vh;color: rgb(121, 92, 95);font-size:30rpx;'>
+        空间定位，导航求救
+      </view>
+    </custom-swiper-item>
+    <custom-swiper-item style='width: 650rpx; height: 600rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx'>
+      <image src='/image/phone.jpg' style='border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center; height: 471rpx; width: 462rpx; box-sizing: border-box; left: 82rpx; top: 0rpx; position: relative'>
+      </image>
+      <view style='width: 600rpx; height: 68rpx; display: block; box-sizing: border-box;display: flex;align-items: center;justify-content: center;margin-top: 4vh;color: rgb(121, 92, 95);font-size:30rpx;'>
+        急救指导，拯救生命
+      </view>
+    </custom-swiper-item>
+  </custom-swiper>
+<!--<view  onTap="zhuce" style="transform:translateY(0.5)"></view>-->
+<!--<btn   class='margin-top bg-gradual-blue radius text-center shadow-blur' style='position: relative; left: 1rpx; top: 98rpx; width: 600rpx; height: 84rpx; display: block; box-sizing: border-box; border-radius: 40rpx; color:white' >
+    注册用户，添加紧急联系人
+  </btn>-->
+  <btn class='bg-grey margin-top text-center' style='position: relative; left: 1rpx; top: 98rpx; width: 600rpx; height: 84rpx; display: block; box-sizing: border-box; border-radius: 40rpx; ' onTap='antmoveAction' data-antmove-tap='toVisitHomepage'>
+    点击此处，体验小程序
+  </btn>
+  <view style='color: #999999; font-size: 12px;margin-top: 16vh;width: 100%;display: flex;justify-content: center;'>
+    <view style='width: auto; height: 40rpx; display: block; box-sizing: border-box'>
+      注册登录代表你同意该软件      <text style='color: red;font-weight: 600;' onTap='antmoveAction' data-antmove-tap='toNavigateto'>
+        《隐私协议》      </text>
+    </view>
+  </view>
+</view>
+<block a:if='{{flagFalse}}'>
+  <view a:if='{{flagFalse}}' class='head-bar' style='height: {{barInfo.barH}}px; background-color: #FAFAFA; padding-top: {{barInfo.barTop}}px;'>
+    <view style='height: {{barInfo.barBtnH}}px; line-height: {{barInfo.barBtnH}}px; ' class='up'>
+    </view>
+  </view>
+  <view class='displayAll padding-left padding-right' style='align-items: center;justify-content: space-between;'>
+    <view class="displayAll">
+      <image src="../../image/logo.png" mode="heightFix" style="height:4vh;" />
+      <view class="text-xl " style="margin-left: 10rpx;line-height: 2vh;font-size: 1.5vh;">
+          <text class="text-bold text-grey" decode="{{true}}">
+              你好&nbsp;&nbsp;{{minz}}
+          </text>
+          <text class="text-bold" style="color: #F63F3E;display:block">
+              欢迎使用怡心守护
+          </text>
+      </view>
+  </view>  
+  <view class="displayAll" style="width: 600rpx;justify-content: space-between;font-size: 1.5vh;align-items: center;">
+    <view style="margin-left: 5px;line-height: 2vh;font-size: 1.5vh;">
+        <text class="text-bold text-grey" decode="{{true}}">
+            {{xianc}}
+        </text>
+        <text class="text-bold" style="color: #F63F3E;display:block">
+            See your location
+        </text>
+    </view>
+    <image src="../../image/homePageLocation.png" mode="heightFix" style="height: 4vh;" />
+</view>
+  </view>  
+  <view class='displayAll' style='align-items: center;justify-content: center;flex-direction: column;font-size: 36rpx;line-height: 4vh;margin-top: 4vh;'>
+    <text class=' text-bold text-black'>
+      你需要    </text>    
+<text class=' text-bold text-black'>医疗急救吗?    </text>    <text class='text-Abc text-gray' style='color:rgb(209, 214, 219);'>
+      Do you need help?    </text>
+  </view>  <view class='displayAll' style='align-items: center;justify-content: center;flex-direction: column;font-size: 36rpx;line-height: 2vh;flex-direction: column;'>
+    <text class=' text-bold text-black' style='color: #F63F3E;'>
+      点击下方求救    </text>    <text class='cuIcon-unfold lg text-gray' style='color: #F63F3E;margin-top: 1vh;'>
+    </text>
+  </view>  <view>
+    <view class='child' onTap='antmoveAction' data-antmove-tap='ceshi'>
+    </view>
+    <view class=' margin-top'>
+      <image src='/image/button.png' mode='widthFix' style='width: 750rpx;'>
+      </image>
+    </view>
+  </view>
+  <view class='displayAll' style='align-items: center;justify-content: center;flex-direction: column;font-size: 36rpx;line-height: 3vh;margin-top: 0vh;'>
+    <text class=' text-bold text-black'>
+      不知道该怎么办？    </text>    <text class='text-gray' style='font-size: 2vh;'>
+      选择下方指导    </text>
+  </view>    <scroll-view scroll-x="true" style="width: 750rpx;height: 12vh;margin-top: 2vh;white-space:nowrap;">
+ 
+    <navigator a:for="{{toShowStruct}}" url="{{item.url}}" class="shadow-warp bg-white displayAll view_first" style="width: 300rpx;height:100%;display:inline-block;margin-left: 1vh;margin-right: 1vh;padding:2vh;">
+            <view class="cu-bar" style="min-height: 0rpx;">
+                <view class="action sub-title">
+                    <text class="text-xl text-bold text-black">{{item.name}}</text>
+                    <text class="text-ABC text-gray">{{item.secondName}}</text>
+                    <!-- last-child选择器-->
+                </view>
+            </view>
+  
+        <view class="displayAll" style="align-items: center;justify-content: space-between;width: 100%;height: 8vh;">
+            <text class="cuIcon-right lg text-red">
+            </text>
+            <image src="{{item.address}}" mode="heightFix" style="height: 5vh;" />
+        </view>
+    </navigator>
+
+</scroll-view>
+</block>
+</view>

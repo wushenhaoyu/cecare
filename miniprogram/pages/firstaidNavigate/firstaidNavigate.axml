@@ -1,0 +1,49 @@
+<view class='page-container-classname'>
+                <view class='head-bar' style='height: {{barInfo.barH}}px; background-color: rgb(60, 152, 250); padding-top: {{barInfo.barTop}}px;width: 100%;position:fixed;top:0rpx!important;width: 750rpx;z-index: 999;' ref='saveChildRef0'>
+  <view style='height: {{barInfo.barBtnH}}px; line-height: {{barInfo.barBtnH}}px; ' class='up'>
+    <view style="width:10%">
+    </view>
+    <view style='margin-left: 1vh; font-size: 28rpx;'>
+      急救处理
+    </view>
+  </view>
+</view><view style='height:{{barInfo.barH}}px;'>
+</view><view style='width: 100%;height: 77vh;display: flex;flex-direction: column;justify-content: center;align-content: centers;'>
+  <view style='width: 100%;height: auto;display: flex;align-items: center;justify-content: center;font-size: 150rpx;margin-top: 0vh;color: rgb(60, 152, 250);text-shadow: var(--ShadowSize) var(--blueShadow);'>
+    保持镇静
+  </view>
+  <view style='width: 100%;height:25vh; display: flex;align-items: center;justify-content: center;margin-top: 2vh;'>
+    <image src='/image/doctor.png' mode='heightFix' style='width: 100%;height: 100%;'>
+    </image>
+  </view>
+  <view style='height: auto;width: 100%;display:flex;justify-content: center;margin-top: 2vh;'>
+    <view style='height: auto;width: 584rpx;display: flex;align-items: center;'>
+      <image src='/image/right.png' mode='heightFix' style='height: 7vh;'>
+      </image>
+      <view style='font-size: 4vh;margin-left: 30rpx;color: rgb(60, 152, 250);text-shadow: var(--ShadowSize) var(--blueShadow);'>
+        确保已拨打120
+      </view>
+    </view>
+  </view>
+  <view style='width: 100%;height:auto; display: flex;align-items: center;justify-content: center;margin-top: 2vh;'>
+    <image src='/image/nextfirst.png' mode='heightFix' style='width: 100%;height: 11vh;' onTap='antmoveAction' data-antmove-tap='scrollSteps'>
+    </image>
+  </view>
+  <view style='width: 100%;height: auto;display: flex;justify-content: center;margin-top: 2vh;'>
+    <image src='/image/importa.png' mode='heightFix' style='width: 100%;height: 3vh;'>
+    </image>
+    <view style='width: 525rpx;'>
+      优先听从120电话指导，如遇紧急情况可以按照以下步骤简单急救
+    </view>
+    <view>
+    </view>
+  </view>
+</view><view style='position: fixed;bottom: 0rpx;z-index: 999;'>
+  <scroll-view scroll-x=" " class='bg-white padding response cu-steps steps-bottom' scroll-into-view='scroll-{{scroll}}' scroll-with-animation=" ">
+    <view class="cu-item {{index>scroll?'':'text-blue'}} padding-lr-xl" a:for='{{10}}' a:key=" " id='scroll-{{index}}' ref-numbers='{{10}}'>
+      步骤 {{index + 1}}      <text class='num' data-index='{{index + 1}}'>
+      </text>
+    </view>
+  </scroll-view>
+</view>
+            </view>

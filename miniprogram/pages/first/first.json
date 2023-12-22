@@ -1,0 +1,10 @@
+{
+	"usingComponents": {
+		"custom-swiper": "/__antmove/component/custom-swiper/custom-swiper",
+		"custom-swiper-item": "/__antmove/component/custom-swiper-item/custom-swiper-item",
+		"btn": "/__antmove/component/btn/btn",
+		"custom-navigator": "/__antmove/component/custom-navigator/custom-navigator"
+	},
+	"disableScroll": false,
+	"navigationStyle": "custom"
+}

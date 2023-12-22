@@ -1,0 +1,16 @@
+{
+  "modes": [
+    {
+      "title": "pages/zhuche/zhuche",
+      "page": "pages/zhuche/zhuche",
+      "launchMode": "common",
+      "pageQuery": ""
+    },
+    {
+      "title": "pages/study/study",
+      "page": "pages/study/study",
+      "launchMode": "common",
+      "pageQuery": ""
+    }
+  ]
+}

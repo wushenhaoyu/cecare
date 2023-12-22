@@ -1,0 +1,85 @@
+{
+	"pages": [
+		"pages/first/first",
+		"pages/firstaidNavigate/firstaidNavigate",
+		"pages/secondaidNavigate/secondaidNavigate",
+		"pages/third/third",
+		"pages/jijiuchuli/jijiuchuli",
+		"pages/personality/personality",
+		"pages/connect/connect",
+		"pages/explain/explain",
+		"pages/volunteer/volunteer",
+		"pages/question/question",
+		"pages/fontweight/fontweight",
+		"pages/about/about",
+		"pages/client/client",
+		"pages/zhuche/zhuche",
+		"pages/denglu/denglu",
+		"pages/friendslist/friendslist",
+		"pages/conversation/conversation",
+		"kepu/kepu1/kepu1",
+		"kepu/kepu2/kepu2",
+		"kepu/kepu3/kepu3",
+		"kepu/kepu4/kepu4",
+		"kepu/kepu5/kepu5",
+		"kepu/kepu6/kepu6",
+		"kepu/kepu7/kepu7",
+		"kepu/kepu8/kepu8",
+		"kepu/kepu9/kepu9",
+		"pages/jiuchuli2/jijiuchuli2",
+		"pages/jijiuchuli3/jijiuchuli3",
+		"pages/jijiuchuli4/jijiuchuli4",
+		"pages/jijiuchuli5/jijiuchuli5",
+		"pages/login/login",
+		"pages/haveBreath11/haveBreath11",
+		"pages/haveBreath21/haveBreath21",
+		"pages/haveBreath3/haveBreath3",
+		"pages/haveBreath4/haveBreath4",
+		"pages/haveBreath5/haveBreath5",
+		"pages/haveBreath6/haveBreath6",
+		"pages/haveBreath7/haveBreath7",
+		"pages/haveBreath8/haveBreath8",
+		"pages/haveBreath9/haveBreath9",
+		"pages/haveBreath10/haveBreath10",
+		"pages/haveBreath12/haveBreath12",
+		"pages/study/study",
+		"pages/location/location",
+		"pages/article/article",
+		"pages/location1/location1"
+	],
+	"window": {
+    "transparentTitle": "always"
+    
+	},
+	"tabBar": {
+		"selectedColor": "#3C98FA",
+		"items": [
+			{
+				"pagePath": "pages/first/first",
+				"name": "紧急求救",
+				"icon": "image/first.png",
+				"activeIcon": "image/selectedfirst.png"
+			},
+			{
+				"pagePath": "pages/study/study",
+				"name": "医疗科普",
+				"icon": "image/second.png",
+				"activeIcon": "image/selecedsecond.png"
+			},
+			{
+				"pagePath": "pages/third/third",
+				"name": "医学咨询",
+				"icon": "image/third.png",
+				"activeIcon": "image/selectedthird.png"
+			},
+			{
+				"pagePath": "pages/login/login",
+				"name": "个人中心",
+				"icon": "image/index.png",
+				"activeIcon": "image/selectedindex.png"
+			}
+		]
+	}
+
+  
+}

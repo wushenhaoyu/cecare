@@ -1,0 +1,117 @@
+<view class='page-container-classname'>
+                <view class='head-bar' style='height: {{barInfo.barH}}px; background-color: rgb(60, 152, 250); padding-top: {{barInfo.barTop}}px;width: 100%;position: fixed;z-index: 999;' ref='saveChildRef0'>
+  <view style='height: {{barInfo.barBtnH}}px; line-height: {{barInfo.barBtnH}}px; ' class='up'>
+    <view style="width:5%">
+    </view>
+    <view style='margin-left: 1vh;'>
+      急救处理
+    </view>
+  </view>
+</view><view style='height:{{barInfo.barH}}px;'>
+</view><view style='height: 10vh;width: 20vh;margin-top: 0vh;'>
+  <image src='/image/haveBreath.png' style='height: 10vh;width: 23vh;margin-left: 2vh;'>
+  </image>
+</view><view style='width: 100%;height: 6vh;margin-left: 5vh;color: rgb(255, 0, 0);font-size: 73rpx;margin-top: -2vh;font-weight:550'>
+  请选择可能的症状
+</view><view style='font-size: 3vh;'>
+  <custom-navigator url='/pages/haveBreath3/haveBreath3'>
+    <view style='width: 90%;height: 7vh;display: flex;' class='borderBox'>
+      <view style='color:red;font-size: 90rpx;margin-left: 4vh;'>
+        *
+      </view>
+      <view style='font-weight: 73rpx;margin-left: 2vh;display: flex;align-items: center;'>
+        心脏病
+      </view>
+    </view>
+  </custom-navigator>
+  <custom-navigator url='/pages/haveBreath5/haveBreath5'>
+    <view style='width: 90%;height: 7vh;display: flex;' class='borderBox'>
+      <view style='color:red;font-size: 90rpx;margin-left: 4vh;'>
+        *
+      </view>
+      <view style='font-weight: 73rpx;margin-left: 2vh;display: flex;align-items: center;'>
+        哮喘
+      </view>
+    </view>
+  </custom-navigator>
+  <custom-navigator url='/pages/haveBreath4/haveBreath4'>
+    <view style='width: 90%;height: 7vh;display: flex;' class='borderBox'>
+      <view style='color:red;font-size: 90rpx;margin-left: 4vh;'>
+        *
+      </view>
+      <view style='font-weight: 73rpx;margin-left: 2vh;display: flex;align-items: center;'>
+        癫痫（羊癫疯）
+      </view>
+    </view>
+  </custom-navigator>
+  <custom-navigator url='/pages/haveBreath6/haveBreath6'>
+    <view style='width: 90%;height: 7vh;display: flex;' class='borderBox'>
+      <view style='color:red;font-size: 90rpx;margin-left: 4vh;'>
+        *
+      </view>
+      <view style='font-weight: 73rpx;margin-left: 2vh;display: flex;align-items: center;'>
+        骨折
+      </view>
+    </view>
+  </custom-navigator>
+  <custom-navigator url='/pages/haveBreath7/haveBreath7'>
+    <view style='width: 90%;height: 7vh;display: flex;' class='borderBox'>
+      <view style='color:red;font-size: 90rpx;margin-left: 4vh;'>
+        *
+      </view>
+      <view style='font-weight: 73rpx;margin-left: 2vh;display: flex;align-items: center;'>
+        噎住
+      </view>
+    </view>
+  </custom-navigator>
+  <custom-navigator url='/pages/haveBreath8/haveBreath8'>
+    <view style='width: 90%;height: 7vh;display: flex;' class='borderBox'>
+      <view style='color:red;font-size: 90rpx;margin-left: 4vh;'>
+        *
+      </view>
+      <view style='font-weight: 73rpx;margin-left: 2vh;display: flex;align-items: center;'>
+        过敏
+      </view>
+    </view>
+  </custom-navigator>
+  <custom-navigator url='/pages/haveBreath9/haveBreath9'>
+    <view style='width: 90%;height: 7vh;display: flex;' class='borderBox'>
+      <view style='color:red;font-size: 90rpx;margin-left: 4vh;'>
+        *
+      </view>
+      <view style='font-weight: 73rpx;margin-left: 2vh;display: flex;align-items: center;'>
+        中毒
+      </view>
+    </view>
+  </custom-navigator>
+  <custom-navigator url='/pages/haveBreath10/haveBreath10'>
+    <view style='width: 90%;height: 7vh;display: flex;' class='borderBox'>
+      <view style='color:red;font-size: 90rpx;margin-left: 4vh;'>
+        *
+      </view>
+      <view style='font-weight: 73rpx;margin-left: 2vh;display: flex;align-items: center;'>
+        中暑
+      </view>
+    </view>
+  </custom-navigator>
+  <custom-navigator url='/pages/haveBreath12/haveBreath12'>
+    <view style='width: 90%;height: 7vh;display: flex;' class='borderBox'>
+      <view style='color:red;font-size: 90rpx;margin-left: 4vh;'>
+        *
+      </view>
+      <view style='font-weight: 73rpx;margin-left: 2vh;display: flex;align-items: center;'>
+        颅脑外伤
+      </view>
+    </view>
+  </custom-navigator>
+  <view style='height: 14vh;'>
+  </view>
+</view><view style='position: fixed;bottom: 0rpx;z-index: 999;'>
+  <scroll-view scroll-x=" " class='bg-white padding response cu-steps steps-bottom' scroll-into-view='scroll-{{scroll}}' scroll-with-animation=" ">
+    <view class="cu-item {{index>scroll?'':'text-blue'}} padding-lr-xl" a:for='{{10}}' a:key=" " id='scroll-{{index}}' ref-numbers='{{10}}'>
+      步骤 {{index + 1}}      <text class='num' data-index='{{index + 1}}'>
+      </text>
+    </view>
+  </scroll-view>
+</view>
+            </view>

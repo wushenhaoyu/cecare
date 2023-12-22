@@ -1,0 +1,112 @@
+.page {
+    background-color: #eff1f8;
+}
+
+.displayAll {
+    display: flex;
+    width: 750rpx;
+    height: auto;
+}
+
+.up {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.child {
+    width: 31vh;
+    height: 31vh;
+    border-radius: 50%;
+    z-index: 1;
+    /* background-color: #096; */
+    position: absolute;
+    opacity: 0;
+    border: 3rpx solid rgb(255, 255, 255);
+    top: 41vh;
+    left: 14vh;
+}
+
+swiper_box{
+  justify-content: center;
+}
+/*
+.kuaiBan {
+    width: 84%;
+    height: 100%;
+    background-color: white;
+    border-radius: 12rpx;
+    box-shadow: rgba(12, 12, 12, 0.03) 0px 2px 15px -5px;
+    background-color: white;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding-top: 3vh;
+    flex-direction: column;
+    color: rgb(121, 92, 95);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.title {
+    position: relative;
+    color: black;
+    width: 100%;
+    font-size: 2vh;
+    font-weight: 500;
+}
+
+.title1 {
+    margin-bottom: 2vh;
+    font-size: 4vh;
+}
+
+image {
+    width: 480rpx;
+    height: 500rpx;
+} 
+
+ .container1 {
+
+    margin: 5vh auto 20rpx;
+    width: 600rpx;
+     min-height: 100%; 
+    text-align: center;
+    justify-content: space-around;
+    font-size: 50rpx;
+    padding: 4vh;
+} 
+ 
+.container2 {
+    margin-top: 30rpx;
+    font-size: 30rpx;
+    color: gray;
+}
+
+.jijiuchuli {
+    margin-top: 20rpx;
+    box-shadow: 2px 2px 2px rgb(135, 135, 135, 0.5);
+    background-image: linear-gradient(to right, #3DD48E, #38CA9A);
+    color: white;
+}
+
+.get-location {
+    margin-top: 2vh;
+    box-shadow: 2px 2px 2px rgb(135, 135, 135, 0.5);
+    background-image: linear-gradient(to right, #3DD48E, #38CA9A);
+    color: white;
+}  */

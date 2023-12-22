@@ -1,0 +1,57 @@
+<view class='page-container-classname'>
+                <view class='head-bar' style='height: {{barInfo.barH}}px; background-color: rgb(60, 152, 250); padding-top: {{barInfo.barTop}}px;width: 100%;position: fixed;z-index: 999;' ref='saveChildRef0'>
+  <view style='height: {{barInfo.barBtnH}}px; line-height: {{barInfo.barBtnH}}px; ' class='up'>
+    <view style="width:5%">
+    </view>
+    <view style='margin-left: 1vh;'>
+      咨询
+    </view>
+  </view>
+</view><view style='height: {{barInfo.barH}}px;'>
+</view><view a:for='{{all}}' class='cu-chat' ref-numbers='{{all}}'>
+  <view class='cu-item' a:if='{{!item.flag}}'>
+    <view class='cu-avatar radius' style='background-image:url(https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/ren.gif?sign=bacfb59716c5fb54ea8eef8183b89ad7&t=1656321939);'>
+    </view>
+    <view class='main'>
+      <view class='content shadow'>
+        <text a:if='{{!item.yuyin}}'>
+          {{item.msg}}        </text>        <view style='width: 100rpx;display: flex;align-items: center;justify-content: center;'>
+          <image src='/image/yuyin.png' mode='heightFix' a:if='{{item.yuyin}}' data-soundid='{{item.msg}}' style='height: 50rpx;' onTap='antmoveAction' data-antmove-tap='bofang'>
+          </image>
+        </view>
+      </view>
+    </view>    <view class='date '>
+      {{item.myTime}}
+    </view>
+  </view>  <view class='cu-item self' a:if='{{item.flag}}'>
+    <view class='main'>
+      <view class='content bg-green shadow'>
+        <text a:if='{{!item.yuyin}}'>
+          {{item.msg}}        </text>        <view style='width: 100rpx;display: flex;align-items: center;justify-content: center;'>
+          <image src='/image/yuyin.png' mode='heightFix' a:if='{{item.yuyin}}' data-soundid='{{item.msg}}' style='height: 50rpx;' onTap='antmoveAction' data-antmove-tap='bofang'>
+          </image>
+        </view>
+      </view>
+    </view>    <view class='cu-avatar radius' style='background-image:url(https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/ren.gif?sign=bacfb59716c5fb54ea8eef8183b89ad7&t=1656321939);'>
+    </view>
+    <view class='date'>
+      {{item.myTime}}
+    </view>
+  </view>
+</view><view style='height: 10vh;'>
+</view><view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style='bottom:{{InputBottom}}px'>
+  <view class='action'>
+    <text class='cuIcon-sound text-grey' onTouchStart='antmoveAction' data-antmove-touchstart='openRecording' onTouchEnd='antmoveAction' data-antmove-touchend='shutRecording'>
+    </text>
+  </view>  <input name='key' placeholder='请输入聊天内容' value='{{key}}' class='solid-bottom' focus='{{false}}' maxlength='{{300}}' onInput='keyInput' onFocus='InputFocus' onBlur='InputBlur'>
+  </input>
+  <view class='action'>
+  </view>
+  <btn size='mini' class='cu-btn bg-green shadow font-size:28rpx; mini-style' onTap='antmoveAction' data-antmove-tap='sendMsg'>
+    发送
+  </btn>
+</view><view a:if='{{flag1}}' style='position: fixed;top: 40vh;left: 300rpx;'>
+  <image src='/image/vedio.png' mode='heightFix' style='height:10vh'>
+  </image>
+</view>
+            </view>

@@ -1,0 +1,21 @@
+<view class='page-container-classname'>
+                <view class='box1' ref='saveChildRef0'>
+  <view style='font-size: 60rpx;margin-left: 20rpx;margin-top: 20rpx;'>
+    问题与意见
+  </view>
+  <scroll-view class='box2' scroll-y='true'>
+    <textarea style='width: 100%;background-color: rgb(242, 242, 242);height: 100%;' name=" " id=" " cols='{{30}}' rows='{{10}}' placeholder='请将使用中的意见与问题反馈给我们，我们将第一时间回复'>
+    </textarea>
+  </scroll-view>
+</view><view class='box3'>
+</view><view class='box4'>
+  <input value='联系人姓名:'>
+  </input>
+  <view style='width: 100%;border-top: 2rpx solid black;'>
+  </view>
+  <input value='联系人电话:'>
+  </input>
+</view><btn type='primary' class=' primary-style'>
+  提交
+</btn>
+            </view>

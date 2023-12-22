@@ -1,0 +1,64 @@
+<view class='page-container-classname'>
+                <view class='head-bar' style='height: {{barInfo.barH}}px; background-color: rgb(60, 152, 250); padding-top: {{barInfo.barTop}}px;width: 100%;position: fixed;z-index: 999;' ref='saveChildRef0'>
+  <view style='height: {{barInfo.barBtnH}}px; line-height: {{barInfo.barBtnH}}px; ' class='up'>
+    <view style="width:5%">
+    </view>
+    <view style='margin-left: 1vh;'>
+      急救处理
+    </view>
+  </view>
+</view><view style='height: {{barInfo.barH}}px;'>
+</view><view style='width: 100%;height: auto; display: flex;align-items: center;justify-content: center;'>
+  <view style='width: 90%;height: auto;'>
+    <view style='height: 7vh;width: 234rpx;margin-left: 0vh;display: flex;align-items: center;justify-content: space-evenly;'>
+      <view style='height: auto;width: auto;'>
+        <image src='/image/haveBreathicon.png' mode='heightFix' style='height: 4vh;'>
+        </image>
+      </view>
+      <view style='font-size: 42rpx;font-weight: 600;'>
+        噎住
+      </view>
+    </view>
+    <view style='color: #9c9c9c !important;font-size: 24rpx;margin-top: -1vh;'>
+      <text decode='{{true}}'>
+        尊老爱幼团队&ensp;&ensp;智慧急救&ensp;&ensp;2022-6-24&ensp;&ensp;发布于西安      </text>
+    </view>    <image src='https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/dr.%20john%20phillips~1.gif?sign=f6c82a6218f80bfaae965884f78e05a6&t=1683105965' style='width: 100%;height: 15vh;margin-top: 3vh;border-radius: 12rpx;box-shadow: rgba(12, 12, 12, 0.03) 0px 2px 15px -5px;background-color: white;'>
+    </image>
+    <view style='margin-top: 3vh;font-size: 33rpx;font-weight: 600;'>
+      1.如果患者是成人或儿童，用力拍患者后背肩胛骨之间的部位 5 次，以利于把卡在喉咙的东西排出来，再冲击按压患者腹部 5 次。拍打后背和腹部冲击交替进行，直至堵塞物排出。
+    </view>
+    <view style='width: 100%;height: auto;display: flex;align-items: center;justify-content: center;'>
+      <image src='https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/yezhu.jpg?sign=27ace5b6ff7d69a0ad6d64d2aa1b47de&t=1683106004' mode='widthFix' style='margin-top: 3vh;width: 80%;'>
+      </image>
+    </view>
+    <view style='margin-top: 3vh;font-size: 33rpx;font-weight: 600;'>
+      2.对小于1岁的婴儿，可以让其头低于胸部，托住头和颈给予 5 次拍背和 5 次冲击胸部，注意冲击部位应低于双乳头连线。重复操作，直到堵塞物出来或者能听到婴儿哭声。
+    </view>
+    <view style='width: 100%;height: auto;display: flex;align-items: center;justify-content: center;'>
+      <image src='https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/paida.jpg?sign=791f2c111bc4a718c576f078c36349b9&t=1683106089' mode='widthFix' style='margin-top: 3vh;width: 80%;'>
+      </image>
+    </view>
+    <view style='margin-top: 3vh;font-size: 33rpx;font-weight: 600;'>
+      3.如果患者出现意识模糊、声调改变，或患者需要专业的救治，请拨打 120。
+    </view>
+    <view style='height: 25vh;'>
+    </view>
+  </view>
+</view><view style='position: fixed;bottom: 0rpx;z-index: 999;'>
+  <view class='cu-bar bg-white solid-bottom margin-top'>
+    <view class='action'>
+      <text class='cuIcon-title text-orange'>
+      </text>      急救完成
+    </view>    <view class='action'>
+      <btn class='cu-btn bg-green shadow' onTap='antmoveAction' data-antmove-tap='numSteps'>
+        下一步
+      </btn>
+    </view>
+  </view>  <scroll-view scroll-x=" " class='bg-white padding response cu-steps steps-bottom' scroll-into-view='scroll-{{scroll}}' scroll-with-animation=" ">
+    <view class="cu-item {{index>scroll?'':'text-blue'}} padding-lr-xl" a:for='{{10}}' a:key=" " id='scroll-{{index}}' ref-numbers='{{10}}'>
+      {{index + 1}}      <text class='num' data-index='{{index + 1}}'>
+      </text>
+    </view>
+  </scroll-view>
+</view>
+            </view>

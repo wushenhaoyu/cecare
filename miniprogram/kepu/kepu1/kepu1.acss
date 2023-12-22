@@ -1,0 +1,261 @@
+/* pages/kepuone/kepuone.wxss */
+
+.up {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    margin-left: 30rpx;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    transform: rotate(45deg);
+}
+
+/* 
+.movable-view1 {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400rpx;
+    width: 100%;
+    background: white;
+    color: #fff;
+    overflow: hidden;
+    z-index: 999;
+}
+
+movable-area {
+    position: absolute;
+    pointer-events: none;
+    height: 400rpx;
+    width: 750rpx;
+    overflow: hidden;
+}
+
+.item1 {
+    width: 100%;
+    height: 25vh;
+}
+
+.item2 {
+    position: relative;
+    left: 50rpx;
+    top: 13vh;
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 50%;
+    background-color: rgb(255, 83, 83);
+    z-index: 100;
+}
+
+.item3 {
+    width: 480rpx;
+    position: relative;
+    top: 4vh;
+    left: 180rpx;
+    z-index: 200;
+    font-weight: 500;
+    font-size: 60rpx;
+    color: rgba(30, 30, 99, 0.849);
+    border-bottom: 5rpx dashed rgb(68, 114, 196);
+}
+
+.item4 {
+    position: relative;
+    z-index: 300;
+    top: 1vh;
+    left: 600rpx;
+    background-color: rgb(68, 114, 196);
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 50%;
+}
+
+.item5 {
+    display: flex;
+    align-items: center;
+    line-height: 50rpx;
+    padding-top: 20rpx;
+    margin-top: 60rpx;
+    margin-left: 60rpx;
+    height: 450rpx;
+    width: 85%;
+    background-color: white;
+    border: 2rpx solid rgb(217, 217, 217);
+    box-shadow: 5px 5px 0px rgb(255, 192, 0);
+    display: inline-flexbox;
+    border-radius: 2%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 40rpx;
+}
+
+.item6 {
+    margin-top: 100rpx;
+    margin-left: 200rpx;
+    background-color: rgb(144, 255, 255);
+    width: 50%;
+    height: 80rpx;
+    z-index: 100;
+}
+
+.poi {
+    margin-top: 50rpx;
+    margin-left: 57rpx;
+}
+
+.item7 {
+    font-size: 40rpx;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 10rpx;
+    left: -15rpx;
+    border-bottom: 5rpx solid rgb(68, 114, 196);
+    width: 400rpx;
+}
+
+.item8 {
+    width: 100%;
+    height: 1500rpx;
+    display: block;
+
+}
+
+.item9 {
+    margin-left: 120rpx;
+}
+
+.item10 {
+    line-height: 70rpx;
+    height: 800rpx;
+    width: 80%;
+    margin-bottom: 40rpx;
+    font-weight: 500;
+    align-items: center;
+    color: rgb(91, 155, 213);
+    display: flex;
+    justify-content: center;
+    font-size: 37rpx;
+    border: 2rpx solid rgb(217, 217, 217);
+    box-shadow: 5px 5px 0px rgb(255, 192, 0);
+    margin-left: 80rpx;
+    padding-left: 50rpx;
+    padding-right: 30rpx;
+
+}
+
+.item101 {
+    line-height: 70rpx;
+    width: 70%;
+    height: 80rpx;
+    margin-left: 130rpx;
+    font-weight: 500;
+    font-size: 40rpx;
+}
+
+.item11 {
+    margin-top: 200rpx;
+    margin-left: 200rpx;
+    background-color: rgb(255, 255, 92);
+    width: 50%;
+    height: 40rpx;
+    z-index: 100;
+}
+
+.item12 {
+    font-size: 40rpx;
+    position: relative;
+    top: -30rpx;
+    display: flex;
+    justify-content: center;
+}
+
+.item13 {
+    margin-top: -300rpx;
+    width: 100%;
+    height: 500rpx;
+    display: flex;
+    align-items: center;
+}
+
+.item14 {
+    position: relative;
+    left: 50rpx;
+    width: 650rpx;
+    height: 400rpx;
+    background-color: rgb(180, 199, 231);
+    z-index: 100;
+}
+
+.item15 {
+    display: flex;
+    align-items: center;
+    color: red;
+    margin-left: -575rpx;
+    left: 100rpx;
+    height: 90%;
+    width: 600rpx;
+    z-index: 200;
+    background-color: rgb(122, 161, 223);
+}
+
+.box1 {
+    padding-right: 50rpx;
+    padding-left: 50rpx;
+    font-size: 40rpx;
+    display: block;
+}
+
+.box11 {
+    height: 50rpx;
+    width: 370rpx;
+    font-size: 37rpx;
+    margin-top: 50rpx;
+    margin-bottom: 30rpx;
+    background-color: rgb(255,255 , 92);
+    display: flex;
+    align-content: center!important;
+}
+
+.imageBox{
+    width: 80%;
+    margin-left: 84rpx;
+}
+
+.imageBox1{
+    width: 80%;
+    margin-left: 40rpx;
+    height: 450rpx;
+    margin-top: 30rpx;
+}
+
+.item107 {
+    line-height: 70rpx;
+    height: 2700rpx;
+    width: 80%;
+    margin-bottom: 40rpx;
+    font-weight: 500;
+    align-items: center;
+    color: rgb(91, 155, 213);
+    display: block;
+    font-size: 37rpx;
+    border: 2rpx solid rgb(217, 217, 217);
+    box-shadow: 5px 5px 0px rgb(255, 192, 0);
+    margin-left: 80rpx;
+    padding-left: 50rpx;
+    padding-right: 30rpx;
+
+} */
+
+page {
+    background-color: rgb(255, 255, 255) !important;
+    font-family: "Microsoft YaHei";
+}

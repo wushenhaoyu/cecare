@@ -1,0 +1,8 @@
+{
+	"usingComponents": {
+		"mp-actionsheet": "../../components/actionsheet/actionsheet",
+		"btn": "/__antmove/component/btn/btn"
+	},
+	"disableScroll": false,
+	"navigationStyle": "custom"
+}

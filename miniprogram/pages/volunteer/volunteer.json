@@ -1,0 +1,5 @@
+{
+	"usingComponents": { "btn": "/__antmove/component/btn/btn" },
+	"disableScroll": false,
+	"navigationStyle": "custom"
+}

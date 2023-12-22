@@ -1,0 +1,74 @@
+<view class='page-container-classname'>
+                <view class='head-bar' style='height: {{barInfo.barH}}px; background-color: rgb(60, 152, 250); padding-top: {{barInfo.barTop}}px;width: 100%;position:fixed;top:0rpx!important;width: 750rpx;z-index: 999;' ref='saveChildRef0'>
+  <view style='height: {{barInfo.barBtnH}}px; line-height: {{barInfo.barBtnH}}px; ' class='up'>
+    <view style="width:5%">
+    </view>
+    <view style='margin-left: 3vh; font-size: 28rpx;'>
+      急救科普
+    </view>
+  </view>
+</view><view style='height: {{barInfo.barH}}px;'>
+</view><view style='width: 100%;height: auto; display: flex;align-items: center;justify-content: center;'>
+  <view style='width: 90%;height: auto;'>
+    <view style='font-size: 42rpx;margin-top: 2vh;font-weight: 600;'>
+      止血的急救处理
+    </view>
+    <view style='color: #9c9c9c !important;font-size: 24rpx;margin-top: -1vh;'>
+      <text decode='{{true}}'>
+        尊老爱幼团队&ensp;&ensp;智慧急救&ensp;&ensp;2022-6-24&ensp;&ensp;发布于西安      </text>
+    </view>    <image src='https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/dr.%20john%20phillips~1.gif?sign=67b660e3449b4bdfe15298e97b604617&t=1683108307' style='width: 100%;height: 15vh;margin-top: 3vh;border-radius: 12rpx;box-shadow: rgba(12, 12, 12, 0.03) 0px 2px 15px -5px;background-color: white;'>
+    </image>
+    <view style='margin-top: 3vh;font-size: 33rpx;font-weight: 600;'>
+      如有以下情况，请拨打120
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text111}}
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text112}}
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text113}}
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text114}}
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text115}}
+    </view>
+    <view style='margin-top: 8vh;width: 100%;height: auto;display: flex;align-items: center;justify-content: center;flex-direction: column;'>
+      <view style='font-size: 37rpx;border-bottom: 2rpx solid rgb(68, 114, 196);width: 60%;display: flex;align-items: center;justify-content: center;font-weight: 600;'>
+        止血的四种方法
+      </view>
+      <view style='width: 50%;height:30rpx;background-color: rgb(144, 255, 255);position: relative;top:-20rpx;z-index: -1;'>
+      </view>
+    </view>
+    <view style='margin-top: 3vh;font-size: 33rpx;font-weight: 600;'>
+      一般止血法
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text2}}
+    </view>
+    <view style='margin-top: 3vh;font-size: 33rpx;font-weight: 600;'>
+      指压止血法
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text4}}
+    </view>
+    <view style='margin-top: 3vh;font-size: 33rpx;font-weight: 600;'>
+      加压包扎止血法
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text5}}
+    </view>
+    <view style='margin-top: 3vh;font-size: 33rpx;font-weight: 600;'>
+      橡皮止血带止血
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text6}}
+    </view>
+    <view style='height: 10vh;'>
+    </view>
+  </view>
+</view>
+            </view>

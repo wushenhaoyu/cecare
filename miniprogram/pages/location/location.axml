@@ -1,0 +1,49 @@
+<view class='page-container-classname'>
+                <view class='head-bar' style='height: {{barInfo.barH}}px; background-color: rgb(60, 152, 250); padding-top: {{barInfo.barTop}}px;width: 100%;position:fixed;top:0rpx!important;width: 750rpx;z-index: 999;' ref='saveChildRef0'>
+  <view style='height: {{barInfo.barBtnH}}px; line-height: {{barInfo.barBtnH}}px; ' class='up'>
+    <view style="width:5%">
+    </view>
+    <view style='margin-left: 3vh; font-size: 28rpx;'>
+      求救人列表
+    </view>
+  </view>
+</view><view style='height:{{barInfo.barH}}px;'>
+</view><view class='cu-bar search bg-white'>
+  <view class='search-form round'>
+    <text class='cuIcon-search'>
+    </text>    <input type='text' placeholder='搜索求救人名称' confirm-type='search' onInput='searchDataInput'>
+    </input>
+  </view>  <view class='action'>
+    <btn class='cu-btn bg-blue shadow-blur round' style='width: 150rpx;' onTap='antmoveAction' data-antmove-tap='searchData'>
+      搜索
+    </btn>
+  </view>
+</view><view a:for='{{ppp}}' class='cu-list menu-avatar' ref-numbers='{{ppp}}'>
+  <view class='cu-item' style='height: 12vh;'>
+    <view class='cu-avatar round lg' style='background-image:url(https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/logo.png?sign=7e910917848a87507d437f56257740b6&t=1682863151);'>
+    </view>
+    <view data-jb='{{item}}' class='content' onTap='antmoveAction' data-antmove-tap='geren'>
+      <view class='text-grey'>
+        求救人：{{item.name}}
+      </view>
+      <view class='text-gray text-sm flex'>
+        <text class='text-cut'>
+          <text class='cuIcon-infofill text-red  margin-right-xs'>
+          </text>          我发生了紧急情况，希望得到你的帮助        </text>
+      </view>      <view class='text-gray text-sm flex'>
+        <text class='text-cut'>
+          <text class='cuIcon-timefill text-red  margin-right-xs'>
+          </text>          求救时间：{{item.mytime}}        </text>
+      </view>
+    </view>    <view class='action'>
+      <view data-e='{{item._id}}' class='text-red' style='font-size: 40rpx;' onTap='antmoveAction' data-antmove-tap='removeList'>
+        ×
+      </view>
+      <text data-jb='{{item.jb}}' class='cuIcon-locationfill lg text-red' style='font-size: 60rpx;' onTap='antmoveAction' data-antmove-tap='onWatchDemo'>
+      </text>      <view class='text-black text-xs'>
+        求救导航
+      </view>
+    </view>
+  </view>
+</view>
+            </view>

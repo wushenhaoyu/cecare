@@ -1,0 +1,11 @@
+@import "/__antmove/static/app.acss";
+@import "./colorui/main.acss";
+@import "./colorui/icon.acss";
+page {
+    background-color: rgb(250, 250, 250);
+    font-family: "Microsoft YaHei";
+}
+
+view {
+    box-sizing: border-box;
+}

@@ -1,0 +1,27 @@
+<view class='page-container-classname'>
+                <view class='head-bar' style='height: {{barInfo.barH}}px; background-color: rgb(60, 152, 250); padding-top: {{barInfo.barTop}}px;width: 100%;position:fixed;top:0rpx!important;width: 750rpx;z-index: 999;' ref='saveChildRef0'>
+  <view style='height: {{barInfo.barBtnH}}px; line-height: {{barInfo.barBtnH}}px; ' class='up'>
+    <view style="width:5%">
+    </view>
+    <view style='margin-left: 3vh; font-size: 28rpx;'>
+      路线规划
+    </view>
+  </view>
+</view><view style='height:{{barInfo.barH}}px;'>
+</view><view class='map-view-container'>
+  <view a:for='{{ppp}}' data-jb='{{item}}' style='width: 100%;height: 10vh;display: flex;align-items: center;justify-content: center;margin-top: 2vh;' ref-numbers='{{ppp}}' onTap='antmoveAction' data-antmove-tap='onWatchDemo'>
+    <view style='display: flex;width: 678rpx;height: 100%;padding: 24rpx;border-radius: 12rpx;box-shadow: rgba(12, 12, 12, 0.03) 0px 2px 15px -5px;background-color: white;color: black;box-sizing: border-box;'>
+      <image src='/image/touxiang.png' mode='widthFix' style='width: 100rpx;margin-right: 4vh;'>
+      </image>
+      <view style='line-height: 40rpx;'>
+        <view>
+          求救人姓名：{{item.name}}
+        </view>
+        <view>
+          求救人家庭位置：{{item.dizhi}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+            </view>

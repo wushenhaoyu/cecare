@@ -1,0 +1,73 @@
+<view class='page-container-classname'>
+                <view class='head-bar' style='height: {{barInfo.barH}}px; background-color: rgb(60, 152, 250); padding-top: {{barInfo.barTop}}px;width: 100%;position:fixed;top:0rpx!important;width: 750rpx;z-index: 999;' ref='saveChildRef0'>
+  <view style='height: {{barInfo.barBtnH}}px; line-height: {{barInfo.barBtnH}}px; ' class='up'>
+    <view style="width:5%">
+    </view>
+    <view style='margin-left: 3vh; font-size: 28rpx;'>
+      急救科普
+    </view>
+  </view>
+</view><view style='height: {{barInfo.barH}}px;'>
+</view><view style='width: 100%;height: auto; display: flex;align-items: center;justify-content: center;'>
+  <view style='width: 90%;height: auto;'>
+    <view style='font-size: 42rpx;margin-top: 2vh;font-weight: 600;'>
+      哮喘的急救处理
+    </view>
+    <view style='color: #9c9c9c !important;font-size: 24rpx;margin-top: -1vh;'>
+      <text decode='{{true}}'>
+        尊老爱幼团队&ensp;&ensp;智慧急救&ensp;&ensp;2022-6-24&ensp;&ensp;发布于西安      </text>
+    </view>    <image src='https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/dr.%20john%20phillips~1.gif?sign=67b660e3449b4bdfe15298e97b604617&t=1683108307' style='width: 100%;height: 15vh;margin-top: 3vh;border-radius: 12rpx;box-shadow: rgba(12, 12, 12, 0.03) 0px 2px 15px -5px;background-color: white;'>
+    </image>
+    <view style='margin-top: 3vh;font-size: 33rpx;font-weight: 600;'>
+      哮喘发作时有什么表现？
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text1}}
+    </view>
+    <view style='margin-top: 3vh;font-size: 33rpx;font-weight: 600;'>
+      哮喘发作时该怎么办？
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text13}}
+    </view>
+    <view style='margin-top: 5vh;font-size: 33rpx;font-weight: 600;'>
+      患者昏迷时：
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text2}}
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text3}}
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text4}}
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text5}}
+    </view>
+    <view style='margin-top: 5vh;font-size: 33rpx;font-weight: 600;'>
+      患者清醒时：
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text6}}
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text7}}
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text8}}
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text9}}
+    </view>
+    <view style='font-size: 33rpx;font-weight: 600;margin-top: 5vh;color: red;'>
+      注意
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text12}}
+    </view>
+    <view style='height: 10vh;'>
+    </view>
+  </view>
+</view>
+            </view>

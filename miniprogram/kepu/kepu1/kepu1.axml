@@ -1,0 +1,92 @@
+<view class='page-container-classname'>
+                <view class='head-bar' style='height: {{barInfo.barH}}px; background-color: rgb(60, 152, 250); padding-top: {{barInfo.barTop}}px;width: 100%;position:fixed;top:0rpx!important;width: 750rpx;z-index: 999;' ref='saveChildRef0'>
+  <view style='height: {{barInfo.barBtnH}}px; line-height: {{barInfo.barBtnH}}px; ' class='up'>
+    <view style="width:5%">
+    </view>
+    <view style='margin-left: 3vh; font-size: 28rpx;'>
+      急救科普
+    </view>
+  </view>
+</view><view style='height: {{barInfo.barH}}px;'>
+</view><view style='width: 100%;height: auto; display: flex;align-items: center;justify-content: center;'>
+  <view style='width: 90%;height: auto;'>
+    <view style='font-size: 42rpx;margin-top: 2vh;font-weight: 600;'>
+      海姆立克急救法
+    </view>
+    <view style='color: #9c9c9c !important;font-size: 24rpx;margin-top: -1vh;'>
+      <text decode='{{true}}'>
+        尊老爱幼团队&ensp;&ensp;智慧急救&ensp;&ensp;2022-6-24&ensp;&ensp;发布于西安      </text>
+    </view>    <image src='https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/dr.%20john%20phillips~1.gif?sign=67b660e3449b4bdfe15298e97b604617&t=168310830715vh;margin-top: 3vh;border-radius: 12rpx;box-shadow: rgba(12, 12, 12, 0.03) 0px 2px 15px -5px;background-color: white;'>
+    </image>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text1}}
+    </view>
+    <view style='margin-top: 3vh;font-size: 33rpx;font-weight: 600;'>
+      对成年人的急救
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text2}}
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text21}}
+    </view>
+    <view style='width: 100%;height: auto;display: flex;align-items: center;justify-content: center;'>
+      <image src='https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/haimp.png?sign=b49c09597b5e5ce94ed4b333e189b744&t=1683111633' mode='widthFix' style='margin-top: 3vh;width: 80%;'>
+      </image>
+    </view>
+    <view style='margin-top: 5vh;font-size: 33rpx;font-weight: 600;'>
+      对幼儿的急救
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text3}}
+    </view>
+    <view style='width: 100%;height: auto;display: flex;align-items: center;justify-content: center;'>
+      <image src='https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/%E5%9B%BE%E7%89%872.png?sign=062f7f8e2c67edc54a420713de6d2035&t=1683111703' mode='widthFix' style='margin-top: 3vh;width: 80%;'>
+      </image>
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text4}}
+    </view>
+    <view style='color: red;margin-top: 3vh;font-size: 33rpx;font-weight: 600;'>
+      {{text5}}
+    </view>
+    <view style='color: red;margin-top: 1vh;font-size: 27rpx;margin-top: 20rpx;'>
+      {{text6}}
+    </view>
+    <view style='color: red;font-size: 27rpx;margin-top: 20rpx;'>
+      {{text7}}
+    </view>
+    <view style='color: red;font-size: 27rpx;margin-top: 20rpx;'>
+      {{text8}}
+    </view>
+    <view style='margin-top: 5vh;font-size: 33rpx;font-weight: 600;'>
+      自我的急救
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text9}}
+    </view>
+    <view style='width: 100%;height: auto;display: flex;align-items: center;justify-content: center;'>
+      <image src='https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/%E5%9B%BE%E7%89%874.png?sign=24d6392d2635851685c0c3cff4eeb287&t=1683111817' mode='widthFix' style='margin-top: 3vh;width: 80%;'>
+      </image>
+    </view>
+    <view style='margin-top: 5vh;font-size: 33rpx;font-weight: 600;'>
+      孕妇和肥胖患者的急救
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text9}}
+    </view>
+    <view style='width: 100%;height: auto;display: flex;align-items: center;justify-content: center;'>
+      <image src='https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/%E5%9B%BE%E7%89%875.png?sign=c57da45e5bee6faf6bf048c0ddc9d088&t=1683111867' mode='widthFix' style='margin-top: 3vh;width: 80%;'>
+      </image>
+    </view>
+    <view style='font-size: 33rpx;font-weight: 600;margin-top: 5vh;color: red;'>
+      温馨提示
+    </view>
+    <view style='line-height:54rpx;color: rgb(102, 102, 102);margin-top: 3vh;font-size: 27rpx;'>
+      {{text12}}
+    </view>
+    <view style='height: 10vh;'>
+    </view>
+  </view>
+</view>
+            </view>

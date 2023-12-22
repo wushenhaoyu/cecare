@@ -1,0 +1,102 @@
+<view class='page-container-classname'>
+                <view class='head-bar' style='height: {{barInfo.barH}}px; background-color: rgb(60, 152, 250); padding-top: {{barInfo.barTop}}px;width: 100%;position: fixed;z-index: 999;' ref='saveChildRef0'>
+  <view style='height: {{barInfo.barBtnH}}px; line-height: {{barInfo.barBtnH}}px; ' class='up'>
+    <view style="width:5%">
+    </view>
+    <view style='margin-left: 1vh;'>
+      个人档案
+    </view>
+  </view>
+</view><view style='height:{{barInfo.barH}}px ;'>
+</view><view style='color:rgb(150, 150, 150);margin-left: 3vh;margin-top: 1vh;'>
+  请填写个人病例信息
+</view><view style='width: 100%;height: 5vh;background-color: white;margin-top:1vh ;display: flex;align-items: center;'>
+  <view style='color: red;margin-left: 2vh;'>
+    *
+  </view>
+  <view style='margin-left: 5rpx;'>
+    年龄
+  </view>
+  <input name='age' a:if='{{geren.age}}' value='{{geren.age}}' style='margin-left: 2vh;' onInput='keyInput1'>
+  </input>
+  <input name='age' a:if='{{!geren.age}}' placeholder='该用户未填写个人信息' style='margin-left: 2vh;' onInput='keyInput1'>
+  </input>
+</view><view style='width: 100%;height: 5vh;background-color: white;margin-top:6rpx;display: flex;align-items: center;'>
+  <view style='color: red;margin-left: 2vh;'>
+    *
+  </view>
+  <view style='margin-left: 5rpx;'>
+    地址
+  </view>
+  <input name='dizhi' a:if='{{geren.dizhi}}' value='{{geren.dizhi}}' style='margin-left: 2vh;' onInput='keyInput3'>
+  </input>
+  <input name='dizhi' a:if='{{!geren.dizhi}}' placeholder='该用户未填写个人信息' style='margin-left: 2vh;' onInput='keyInput3'>
+  </input>
+</view><view style='width: 100%;height: 5vh;background-color: white;margin-top:6rpx ;display: flex;align-items: center;' onTap='antmoveAction' data-antmove-tap='theCartorn'>
+  <view style='color: red;margin-left: 2vh;'>
+    *
+  </view>
+  <view style='margin-left: 5rpx;'>
+    过往病史
+  </view>
+  <view style='width: 70%;display: flex;justify-content: flex-end;'>
+    <view class='arrow' style='border-color: rgb(150, 150, 150); transform: rotate(225deg);'>
+    </view>
+  </view>
+</view><view a:if='{{true}}' style='width:100%;height: 28vh;background-color: white;display: flex;justify-content: center;align-items: center; flex-direction: column; padding-bottom: 2vh;'>
+  <view style=' width: 90%;height: 92%;background-color: rgb(250, 250, 250);border-radius: 15rpx;border: 2rpx solid rgb(245, 245, 245);margin-bottom: 2vh;display: flex;justify-content: center;'>
+    <textarea a:if='{{geren.bingshi}}' value='{{geren.bingshi}}' maxlength='{{-1}}' style='height: 100%;' onInput='remarkInputAction'>
+    </textarea>
+    <textarea a:if='{{!geren.bingshi}}' placeholder='该用户未填写个人信息' maxlength='{{-1}}' style='height: 100%;' onInput='remarkInputAction'>
+    </textarea>
+  </view>
+</view><view style='width: 100%;height: 5vh;background-color: white;margin-top:6rpx ;display: flex;align-items: center;'>
+  <view style='color: red;margin-left: 2vh;'>
+    *
+  </view>
+  <view style='margin-left: 5rpx;'>
+    个人生活习惯
+  </view>
+  <input name='xig' placeholder='有无烟酒嗜好' style='margin-left: 2vh;' onInput='keyInput2'>
+  </input>
+</view><view a:if='{{true}}' style='width:100%;height: 28vh;background-color: white;display: flex;justify-content: center;align-items: center; '>
+  <view style=' width: 90%;height: 92%;background-color: rgb(250, 250, 250);border-radius: 15rpx;border: 2rpx solid rgb(245, 245, 245);margin-bottom: 2vh;display: flex;justify-content: center;'>
+    <textarea a:if='{{geren.xiguan}}' value='{{geren.xiguan}}' maxlength='{{-1}}' style='height: 100%;' onInput='remarkInputAction1'>
+    </textarea>
+    <textarea a:if='{{!geren.xiguan}}' placeholder='该用户未填写个人信息' maxlength='{{-1}}' style='height: 100%;' onInput='remarkInputAction1'>
+    </textarea>
+  </view>
+</view><view style='width: 100%;height: 5vh;background-color: white;margin-top:6rpx ;display: flex;align-items: center;' onTap='antmoveAction' data-antmove-tap='theCartorn3'>
+  <view style='margin-left: 2vh;'>
+    *
+  </view>
+  <view style='margin-left: 5rpx;'>
+    个人简述
+  </view>
+  <view style='width: 70%;display: flex;justify-content: flex-end;'>
+    <view class='arrow' style='border-color: rgb(150, 150, 150); transform: rotate(225deg);'>
+    </view>
+  </view>
+</view><view a:if='{{true}}' style='width:100%;height: 28vh;background-color: white;display: flex;justify-content: center;align-items: center;flex-direction: column;padding-bottom: 2vh; '>
+  <view style=' width: 90%;height: 92%;background-color: rgb(250, 250, 250);border-radius: 15rpx;border: 2rpx solid rgb(245, 245, 245);margin-bottom: 2vh;display: flex;justify-content: center;'>
+    <textarea a:if='{{geren.jianshu}}' value='{{geren.jianshu}}' maxlength='{{-1}}' style='height: 100%;' onInput='remarkInputAction3'>
+    </textarea>
+    <textarea a:if='{{!geren.jianshu}}' placeholder='该用户未填写个人信息' maxlength='{{-1}}' style='height: 100%;' onInput='remarkInputAction3'>
+    </textarea>
+  </view>
+</view><view a:if='{{flagList}}' style='color:rgb(150, 150, 150);margin-left: 0vh;margin-top: 1vh;display: flex;'>
+  <view a:if='{{flagList}}' style='color: red;margin-left: 2vh;'>
+    *
+  </view>
+  的选项必填
+</view><btn a:if='{{flagList}}' type='primary' style='background-color: rgb(60, 152, 250);' class=' primary-style' onTap='antmoveAction' data-antmove-tap='confirmButton'>
+  上传
+</btn><view a:if='{{flagList}}' style='height: 20vh;'>
+</view><view a:if='{{!flagList}}' style='color:rgb(150, 150, 150);margin-left: 0vh;margin-top: 1vh;display: flex;'>
+  <view style='color: red;margin-left: 2vh;'>
+  </view>
+</view><btn a:if='{{!flagList}}' type='primary' style='background-color: red;margin-top: 3vh;width: auto;' class=' primary-style' onTap='antmoveAction' data-antmove-tap='tofriendList'>
+  点击此处，查看求救人紧急联系人列表
+</btn><view style='height: 20vh;'>
+</view>
+            </view>
