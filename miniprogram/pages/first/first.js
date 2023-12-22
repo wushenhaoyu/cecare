@@ -44,6 +44,11 @@ Page({
     },
 
     toNavigate1() {
+      my.showModal({
+        'title':'提示',
+        content:"正在开发中"
+      })
+      return
         _my.navigateTo({
             url: "/pages/location1/location1"
         });
@@ -90,6 +95,11 @@ Page({
     },
 
     toNavigate() {
+      my.showModal({
+        'title':'提示',
+        content:"正在开发中"
+      })
+      return
         _my.navigateTo({
             url: "/pages/location/location"
         });
@@ -453,20 +463,12 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-        _my.removeStorageSync("jb");
-        let that = this;
-        that.setData({
-            minz: _my.getStorageSync("minz"),
-            duanxin: false
-        });
-
-        let phone = _my.getStorageSync("phone");
-
-        if (phone) {
-            that.setData({
-                flagFalse: true
-            });
-        }
+      let data = my.getStorageSync({ key: 'user' });
+      this.setData({
+        avatar: data.data.avatar,
+        name:data.data.Name
+      })
+     
 
        // const DB = _my.cloud.database();
 

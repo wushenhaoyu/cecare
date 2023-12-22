@@ -52,7 +52,7 @@
         </view>
       </view>
       <view open-type='feedback' style='display: flex;align-items: center;justify-content: center;flex-direction: column;'>
-        <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/图片3(1).png?expire_at=1703249297&er_sign=1121be0e0451dfefa41aa83c8d6d1c8b' style='width:7vh;height: 7vh;' onTap='antmoveAction' data-antmove-tap='aboutvolunte3'>
+        <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/图片3(1).png?expire_at=1703249297&er_sign=1121be0e0451dfefa41aa83c8d6d1c8b' style='width:7vh;height: 7vh;' onTap='antmoveAction' data-antmove-tap='aboutvolunte1'>
         </image>
         <view style='font-size: 24rpx;'>
           反馈信息

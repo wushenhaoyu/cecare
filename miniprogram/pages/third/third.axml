@@ -15,7 +15,7 @@
     </view>
     <view style='border: 2rpx solid rgb(128, 128, 128,0.2);width: 50%;margin-bottom: 1vh;'>
     </view>
-    <view a:if='{{uio}}' a:for='{{qiuz}}' data-phone1='{{item.phone1}}' style='font-weight: 300;background-color:white;width:65%;height: 125rpx;box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);border-radius: 6rpx;margin-bottom: 20rpx;display: flex;align-items: center;justify-content: center;flex-direction: column;' ref-numbers='{{qiuz}}' onTap='antmoveAction' data-antmove-tap='toclient'>
+    <view a:if='{{na}}' a:for='{{qiuz}}' data-phone1='{{item.phone1}}' style='font-weight: 300;background-color:white;width:65%;height: 125rpx;box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);border-radius: 6rpx;margin-bottom: 20rpx;display: flex;align-items: center;justify-content: center;flex-direction: column;' ref-numbers='{{qiuz}}' onTap='antmoveAction' data-antmove-tap='toclient'>
       <image src='/image/touxiang.png' mode='heightFix' style='width:100%;'>
       </image>
       <view>
@@ -26,11 +26,11 @@
   <view style='width: 600rpx;height:100vh;background-color: white;'>
     <view style='height:22vh;width:100%;display: flex;justify-items: center;align-items: center;flex-direction: column;'>
       <view style='width: 25%;height:150rpx;border-radius: 50%;margin-top: 2vh;overflow: hidden;'>
-        <image src={{avatar}} style='height:100%;width:100%;'>
+        <image src='{{avatar}}' style='height:100%;width:100%;'>
         </image>
       </view>
       <view style='margin-top: 1vh;font-size: 34rpx;'>
-        {{minz}}
+        {{name}}
       </view>
       <view style='margin-top: 1vh;color:rgb(128, 128, 128,0.4);font-size: 25rpx;'>
         欢迎使用急救咨询频道
@@ -76,7 +76,7 @@
             信息通知
           </view>
           <view style='color:rgb(128, 128, 128,0.4);font-size: 24rpx;margin-top: 0.8vh;'>
-            你好
+            正在开发
           </view>
         </view>
         <view>

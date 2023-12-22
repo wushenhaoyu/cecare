@@ -32,6 +32,7 @@ Page({
         this.setData({
             jinji1: res.detail.value
         });
+        console.log(this.data.jinji1)
     },
     keyInput2: function(res) {
         this.setData({
@@ -39,17 +40,18 @@ Page({
         });
     },
     keyInput3: function(res) {
+      
         this.setData({
             jinji3: res.detail.value
         });
+        
     },
 
     kk() {
         let that = this;
 
-        let phone = _my.getStorageSync("phone");
-
-        const DB = _my.cloud.database();
+        var data = my.getStorageSync({key:"jinji"});
+        var jinji = data.data
 
         if (that.data.jinji2.length != 11) {
             _my.showToast({
@@ -59,56 +61,65 @@ Page({
 
             return;
         }
-
-        DB.collection("user")
-            .where({
-                number: phone
-            })
-            .get()
-            .then(res => {
-                let data = res.data[0];
-                that.setData({
-                    id: data._id,
-                    lian: data.lian
-                });
-            });
-        let lian = that.data.lian;
-
-        if (lian.length == 0) {
-            lian = [
-                {
-                    mingz: that.data.jinji1,
-                    phone: that.data.jinji2,
-                    qin: that.data.jinji3
-                }
-            ];
-        } else {
-            lian.push({
-                mingz: that.data.jinji1,
-                phone: that.data.jinji2,
-                qin: that.data.jinji3
-            });
+        console.log((that.data.jinji1 == ''),that.data.jinji1)
+        if((that.data.jinji1 == ''))
+        {
+          _my.showToast({
+            icon: "none",
+            title: "姓名不能为空"
+            
+        });
+        return;
         }
-
-        DB.collection("user")
-            .doc(that.data.id)
-            .update({
-                data: {
-                    lian: lian
-                }
-            })
-            .then(res => {
+        if((that.data.jinji3 == ''))
+        {
+          _my.showToast({
+            icon: "none",
+            title: "请填写与本人的关系"
+            
+        });
+        return;
+        }
+        console.log(!(jinji),jinji)
+        if(!(jinji))
+        {
+         let res = my.setStorageSync({data:[{jinji1:that.data.jinji1,jinji2:that.data.jinji2,jinji3:that.data.jinji3}],key:'jinji'})
+          console.log(res)
+        }
+        else{
+          for(var i =0; i<jinji.length;i++)
+          {
+            if(jinji[i].jinji2 == that.data.jinji2)
+            {
+              
                 _my.showToast({
-                    title: "添加成功"
-                });
+                  icon: "none",
+                  title: "联系人重复"
+                  
+              });
+              return;
+            
+          }}
+          var newdata = {jinji1:that.data.jinji1,jinji2:that.data.jinji2,jinji3:that.data.jinji3}
+          jinji.push(newdata)
+          console.log(jinji)
+          
+         let res =  my.setStorageSync({data:jinji,key:"jinji"})
+         if(res.success)
+         {
+          _my.showToast({
+            title: "添加成功"
+        });
 
-                setTimeout(function() {
-                    _my.redirectTo({
-                        url: "/pages/friendslist/friendslist"
-                    });
-                }, 2000);
-                console.log(res);
-            });
+         }
+        }
+        setTimeout(function() {
+          _my.redirectTo({
+              url: "/pages/friendslist/friendslist"
+          });
+      }, 2000);
+
+
     },
 
     /**
@@ -117,22 +128,9 @@ Page({
     onLoad: function(options) {
         let that = this;
 
-        let phone = _my.getStorageSync("phone");
+        let data = my.getStorageSync("jinji");
+        let jinji = data.data
 
-        const DB = _my.cloud.database();
-
-        DB.collection("user")
-            .where({
-                number: phone
-            })
-            .get()
-            .then(res => {
-                let data = res.data[0];
-                that.setData({
-                    id: data._id,
-                    lian: data.lian
-                });
-            });
     },
 
     /**

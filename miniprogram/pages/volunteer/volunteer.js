@@ -152,11 +152,20 @@ Page({
                 }
 
                 if (res.confirm) {
-                    _my.setStorageSync("zhi", that.data.xingmin);
+                  if(this.data.jieshao&&this.data.xingmin&&this.data.xingbie&&this.data.zhuzhi&&this.data.dianhua&&this.data.hangye)
+                  {
+                    my.setStorageSync("zhi", that.data.xingmin);
                     _my.showToast({
                       title: "上传成功请等待审核"
                   });
                   _my.navigateBack();
+                }
+                else{
+                  _my.showToast({
+                    title: "信息不全，请认真填写"
+                });
+                }
+              
                     //const DB = _my.cloud.database();
 
                    /* if (!that.data.xingmin) {

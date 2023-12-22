@@ -66,19 +66,35 @@ Page({
             flag1: !this.data.flag1
         });
 
-        let phone = _my.getStorageSync("phone");
+        let that = this;
+
+
+        let phone = my.getStorage({key:"user"});
+        console.log(phone)
+        if(phone.success)
+        {
+          phone = phone.data
+        }
+        console.log(phone)
 
         if (!phone) {
             _my.showToast({
+                icon: "error",
                 title: "请先登录"
-            }); // setTimeout(function () {
+            });
+            
+
+            setTimeout(function() {
+                _my.navigateTo({
+                    url: "/pages/login/login"
+                });
+            }, 1000); // setTimeout(function () {
             //     that.jer()
             // }, 1000)
 
             return;
         }
 
-        var that = this;
 
         _my.getSystemInfo({
             success: function(res) {

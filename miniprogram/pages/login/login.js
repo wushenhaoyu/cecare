@@ -62,7 +62,11 @@ Page({
     },
 
     aboutvolunte() {
-        let phone = _my.getStorageSync("phone");
+        let phone = my.getStorageSync({key:'user'});
+        if(phone.success)
+        {
+          phone = phone.data
+        }
 
         if (!phone) {
             _my.showToast({
@@ -109,15 +113,14 @@ Page({
               let userInfo = JSON.parse(res.response).response
               console.log(userInfo.nickName)
               
-           let s = _my.setStorageSync({
+           let s = my.setStorage({
               data: {
                 Name:userInfo.nickName,
-                avatar:userInfo.nickName
+                avatar:userInfo.avatar
               },
-              key: 'user',
+              key: "user",
             });
-            let a = _my.getStorageSync({key:"user"})
-           console.log(a)
+         
             this.setData({
               avatar:userInfo.avatar,
               name:userInfo.nickName
@@ -161,43 +164,25 @@ Page({
             animation: false
         });
 
-        let pp = _my.getStorageSync("phone");
-
-        let that = this;
-
-
-
-        if (!that.data.guo) {
-         
         }
-    },
+    ,
 
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function() {
-      let data = _my.getStorageSync({ key: 'user' });
-      console.log(data);
-      if (data.success) {
-          console.log("执行成功");
-      }
+    
 
-      this.setData({
-        avatar: data.data.avatar,
-        name:data.data.name
-      })
-      console.log(data.data.name)
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-      let data = _my.getStorageSync({key:'user'});
-      console.log(data)
+      let data = my.getStorageSync({ key: 'user' });
       this.setData({
-        avatar: data.avatar,
-        name:data.name
+        avatar: data.data.avatar,
+        name:data.data.Name
       })
   
 

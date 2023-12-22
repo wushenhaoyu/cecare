@@ -447,9 +447,9 @@ Page({
     shangc() {
         let that = this;
 
-        const DB = _my.cloud.database();
 
-        let phone = _my.getStorageSync("phone");
+        let phone = my.getStorage({key:"user"});
+        console.log(phone)
 
         if (!phone) {
             _my.showToast({
@@ -459,7 +459,7 @@ Page({
 
             setTimeout(function() {
                 _my.navigateTo({
-                    url: "/pages/zhuche/zhuche"
+                    url: "/pages/login/login"
                 });
             }, 1000); // setTimeout(function () {
             //     that.jer()
@@ -469,7 +469,7 @@ Page({
         } else {
             let geren = {
                 age: that.data.age,
-                dizhi: that.data.adress,
+                dizhi: that.data.dizhi,
                 bingshi: that.data.msg,
                 xiguan: that.data.msg1,
                 jianshu: that.data.msg3
@@ -478,41 +478,22 @@ Page({
             console.log(that.data.msg1.length);
             console.log(that.data.msg3.length);
             console.log(that.data.age.length);
-            console.log(that.data.adress.length);
+            console.log(that.data.dizhi);
 
             if (
                 that.data.msg.length != 0 &&
                 that.data.msg1.length != 0 &&
                 that.data.msg3.length != 0 &&
                 that.data.age.length != 0 &&
-                that.data.adress.length != 0
+                that.data.dizhi.length != 0
             ) {
                 console.log("success");
-                DB.collection("user")
-                    .doc(that.data.id)
-                    .update({
-                        data: {
-                            geren: geren
-                        },
-                        success: res => {
-                            console.log(res);
-                        },
-                        fail: err => {
-                            icon: "none",
-                                console.error(
-                                    "[数据库] [更新记录] 失败：",
-                                    err
-                                );
-                        }
-                    });
+                my.setStorageSync({data:geren,key:"geren"})
+                
 
                 _my.showToast({
                     title: "添加成功"
-                }); // setTimeout(function () {
-                //     wx.redirectTo({
-                //         url: '/pages/login/login',
-                //     })
-                // }, 1000)
+                }); 
             }
         }
     },
@@ -521,61 +502,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        let that = this;
-
-        let phone = _my.getStorageSync("phone");
-
-        let jb = _my.getStorageSync("jb");
-
-        that.setData({
-            phonenumber: jb.phone
-        });
-
-        if (jb) {
-            const DB = _my.cloud.database();
-
-            DB.collection("user")
-                .where({
-                    number: jb.phone
-                })
-                .get()
-                .then(res => {
-                    let data = res.data[0];
-                    that.setData({
-                        flagList: false,
-                        geren: data.geren,
-                        geren: data.geren,
-                        id: data._id,
-                        age: data.geren.age,
-                        adress: data.geren.dizhi,
-                        msg: data.bingshi,
-                        msg1: data.xiguan,
-                        msg3: data.jianshu
-                    });
-                    console.log(data.bingshi);
-                });
-        } else {
-            const DB = _my.cloud.database();
-
-            DB.collection("user")
-                .where({
-                    number: phone
-                })
-                .get()
-                .then(res => {
-                    let data = res.data[0];
-                    that.setData({
-                        geren: data.geren,
-                        id: data._id,
-                        age: data.geren.age,
-                        adress: data.geren.dizhi,
-                        msg: data.geren.bingshi,
-                        msg1: data.geren.xiguan,
-                        msg3: data.geren.jianshu
-                    });
-                    console.log(data.geren);
-                });
-        }
+        
     },
 
     /**
@@ -586,20 +513,57 @@ Page({
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {},
+    onShow: function() {
+      var that =this
+      let data = my.getStorageSync({ key: 'geren' });
+
+      console.log(data)
+      if(data)
+      {
+        data = data.data
+      }
+      console.log(data)
+     
+     /* let jb = my.getStorage({key:"user"});
+      console.log(jb)
+      if(jb)
+      {
+        jb = jb.data
+        that.setData({
+          phonenumber: jb.Name
+      });
+      }
+*/
+
+    
+
+          that.setData({
+            geren:data,
+            flagList: false,
+            age: data.age,
+            dizhi: data.dizhi,
+            msg: data.bingshi,
+            msg1: data.xiguan,
+            msg3: data.jianshu
+        });
+        console.log(data.bingshi);
+     
+      
+
+    },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
     onHide: function() {
-        _my.removeStorageSync("jb");
+        my.removeStorageSync("jb");
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
     onUnload: function() {
-        _my.removeStorageSync("jb");
+        my.removeStorageSync("jb");
     },
 
     /**

@@ -7,7 +7,6 @@ Page({
      */
     data: {
         array: ["亲属", "邻居", "朋友", "其它"],
-        selector: "",
         jinji1: "",
         jinji2: "",
         jinji3: "",
@@ -50,95 +49,105 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        let i = 0;
-        let that = this;
-
-        let phone = _my.getStorageSync("phone");
-
-        this.setData({
-            lian: options.lian //articleID问pageB页面变量
-        });
-
-        const DB = _my.cloud.database();
-
-        DB.collection("user")
-            .where({
-                number: phone
-            })
-            .get()
-            .then(res => {
-                let data = res.data[0];
-                that.setData({
-                    jinji: data.lian,
-                    id: data._id
-                });
-
-                for (i = 1; i <= that.data.jinji.length; i++) {
-                    if (that.data.lian == that.data.jinji[i - 1].phone) {
-                        this.setData({
-                            shuz: i,
-                            jinji1: that.data.jinji[i - 1].mingz,
-                            jinji2: that.data.jinji[i - 1].phone,
-                            selector: that.data.jinji[i - 1].qin
-                        });
-                        return;
-                    }
-                }
-            });
+    
     },
 
     kk1() {
         let that = this;
-        that.data.jinji.splice(that.data.shuz - 1, 1);
+        let data = my.getStorageSync({key:'jinji'})
+        var jinji = data.data
+        jinji.splice(that.data.shuz,1);
+       let res = my.setStorageSync({
+          data:jinji,
+          key:'jinji'
+        })
+        if(res.success)
+        {
+          _my.showToast({
+            title: "删除成功"
+        });
 
-        const DB = _my.cloud.database();
-
-        DB.collection("user")
-            .doc(that.data.id)
-            .update({
-                data: {
-                    lian: that.data.jinji
-                }
-            })
-            .then(res => {
-                _my.showToast({
-                    title: "删除成功"
-                });
-
-                setTimeout(function() {
-                    _my.redirectTo({
-                        url: "/pages/friendslist/friendslist"
-                    });
-                }, 3000);
+        setTimeout(function() {
+            _my.redirectTo({
+                url: "/pages/friendslist/friendslist"
             });
+        }, 3000);
+      }
+            
     },
 
     kk2() {
         let that = this;
-        that.data.jinji[that.data.shuz - 1].mingz = that.data.jinji1;
-        that.data.jinji[that.data.shuz - 1].phone = that.data.jinji2;
-        that.data.jinji[that.data.shuz - 1].qin = that.data.selector;
+        let data = my.getStorageSync({key:'jinji'})
+        var jinji = data.data
+        if (that.data.jinji2.length != 11) {
+          _my.showToast({
+              icon: "none",
+              title: "请输入正确的手机号"
+          });
 
-        const DB = _my.cloud.database();
-
-        DB.collection("user")
-            .doc(that.data.id)
-            .update({
-                data: {
-                    lian: that.data.jinji
-                }
-            })
-            .then(res => {
-                _my.showToast({
-                    title: "修改成功"
-                });
-
-                setTimeout(function() {
-                    _my.redirectTo({
-                        url: "/pages/friendslist/friendslist"
-                    });
-                }, 3000);
+          return;
+      }
+      console.log((that.data.jinji1 == ''),that.data.jinji1)
+      if((that.data.jinji1 == ''))
+      {
+        _my.showToast({
+          icon: "none",
+          title: "姓名不能为空"
+          
+      });
+      return;
+      }
+      if((that.data.jinji3 == ''))
+      {
+        _my.showToast({
+          icon: "none",
+          title: "请填写与本人的关系"
+          
+      });
+      return;
+      }
+      console.log(!(jinji),jinji)
+      if(!(jinji))
+      {
+       let res = my.setStorageSync({data:[{jinji1:that.data.jinji1,jinji2:that.data.jinji2,jinji3:that.data.jinji3}],key:'jinji'})
+        console.log(res)
+      }
+      else{
+        for(var i =0; i<jinji.length;i++)
+        {
+          if(jinji[i].jinji2 == that.data.jinji2 && jinji[i].jinji2 != jinji[that.data.shuz].jinji2)
+          {
+            
+              _my.showToast({
+                icon: "none",
+                title: "联系人重复"
+                
             });
+            return;
+          
+        }}
+        var newdata = {jinji1:that.data.jinji1,jinji2:that.data.jinji2,jinji3:that.data.jinji3}
+        jinji.splice(that.data.shuz,1,newdata);
+        console.log(jinji)
+        
+       let res =  my.setStorageSync({data:jinji,key:"jinji"})
+       if(res.success)
+       {
+        _my.showToast({
+          title: "修改成功"
+      });
+
+       }
+      }
+      setTimeout(function() {
+        _my.redirectTo({
+            url: "/pages/friendslist/friendslist"
+        });
+    }, 3000);
+        
+               
+            
     },
 
     /**
@@ -149,7 +158,22 @@ Page({
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {},
+    onShow: function(options) {
+      var that = this;
+      that.setData({
+        lian: options.lian //articleID问pageB页面变量
+    });
+      console.log(that.data.lian)
+      let data = my.getStorageSync({key:"jinji"});
+      let jinji =data.data
+      let tar = jinji[lian]
+      this.setData({
+        shuz: lian,
+        jinji1: tar.jinji1,
+        jinji2: tar.jinji2,
+        jinji3: tar.jinji3
+    });
+    },
 
     /**
      * 生命周期函数--监听页面隐藏

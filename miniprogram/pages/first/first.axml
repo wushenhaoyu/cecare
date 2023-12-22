@@ -49,10 +49,10 @@
   </view>
   <view class='displayAll padding-left padding-right' style='align-items: center;justify-content: space-between;'>
     <view class="displayAll">
-      <image src="../../image/logo.png" mode="heightFix" style="height:4vh;" />
+      <image src="{{avatar}}" mode="heightFix" style="height:4vh;" />
       <view class="text-xl " style="margin-left: 10rpx;line-height: 2vh;font-size: 1.5vh;">
           <text class="text-bold text-grey" decode="{{true}}">
-              你好&nbsp;&nbsp;{{minz}}
+              你好&nbsp;&nbsp;{{name}}
           </text>
           <text class="text-bold" style="color: #F63F3E;display:block">
               欢迎使用怡心守护

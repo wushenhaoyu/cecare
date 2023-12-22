@@ -37,7 +37,7 @@
       <view>
         关系：
       </view>
-      <input name='jinji3' placeholder='{{selector}}' type='text' onInput='keyInput3'>
+      <input name='jinji3' placeholder='{{jinji3}}' type='text' onInput='keyInput3'>
       </input>
     </view>
     <btn type='primary' style='background-color: white;border:2rpx solid rgb(121, 92, 95);margin-top:6vh;color: red;font-size: 35rpx;' class=' primary-style' onTap='antmoveAction' data-antmove-tap='kk1'>

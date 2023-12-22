@@ -17,6 +17,17 @@
       "page": "pages/first/first",
       "launchMode": "common",
       "pageQuery": ""
+    },
+    {
+      "title": "pages/client/client",
+      "page": "pages/client/client",
+      "launchMode": "common",
+      "pageQuery": ""
+    },
+    {
+      "title": "s",
+      "page": "pages/first/first",
+      "launchMode": "common"
     }
   ]
 }

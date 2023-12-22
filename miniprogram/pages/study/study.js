@@ -74,30 +74,25 @@ Page({
             url: "/kepu/kepu3/kepu3"
         });
     },
-
     aboutvolunte() {
-        let phone = _my.getStorageSync("Name");
+      let that = this;
+
+
+      let phone = my.getStorage({key:"user"});
+      console.log(phone)
 
         if (!phone) {
             _my.showToast({
                 icon: "error",
-                title: "正在开发"
+                title: "请先登录"
             });
 
-            _my.getOpenUserInfo({
-              success: (res) => {
-                  let userInfo = JSON.parse(res.response).response
-                  console.log(userInfo)
-              },
-              fail: (err) => {
-                  console.log(err)
-              }
-          });
-            /*setTimeout(function() {
+           
+            setTimeout(function() {
                 _my.navigateTo({
-                    url: "/pages/zhuche/zhuche"
+                    url: "/pages/login/login"
                 });
-            }, 1000);*/ // setTimeout(function () {
+            }, 1000); // setTimeout(function () {
             //     that.jer()
             // }, 1000)
 
@@ -112,38 +107,30 @@ Page({
     aboutvolunte1() {
         _my.showModal({
             title: "联系我们",
-            content: "如有想申请志愿者，请联系邮箱2597454007@qq.com"
+            content: "如有想申请志愿者，请联系邮箱1192511920@qq.com"
         });
     },
 
     aboutvolunte3() {
-        let phone = _my.getStorageSync("phone");
+        let phone = my.getStorageSync({key:"user"});
 
         if (!phone) {
             _my.showToast({
                 icon: "error",
-                title: "正在开发"
+                title: "请先登陆"
             });
-            _my.getOpenUserInfo({
-              success: (res) => {
-                  let userInfo = JSON.parse(res.response).response
-                  console.log(userInfo)
-              },
-              fail: (err) => {
-                  console.log(err)
-              }
-          });/*
+        
             setTimeout(function() {
                 _my.navigateTo({
-                    url: "/pages/zhuche/zhuche"
+                    url: "/pages/login/login"
                 });
-            }, 1000); */// setTimeout(function () {
+            }, 1000); // setTimeout(function () {
             //     that.jer()
             // }, 1000)
 
             return;
         } else {
-            _my.setStorageSync("haoyou1", "12345678900");
+            my.setStorageSync("haoyou1", "12345678900");
 
             _my.navigateTo({
                 url: "/pages/client/client"

@@ -25,14 +25,15 @@ Page({
 
     touch: function(event) {
         let gg = event.currentTarget.dataset.item;
+        console.log(gg)
 
         _my.redirectTo({
-            url: "/pages/conversation/conversation?lian=" + gg.phone
+            url: "/pages/conversation/conversation?lian=" + gg
         });
     },
 
     to() {
-        let phone = _my.getStorageSync("phone");
+        let phone = my.getStorageSync("user");
 
         if (!phone) {
             _my.showToast({
@@ -40,20 +41,12 @@ Page({
                 title: "请先登录"
             });
 
-            _my.getOpenUserInfo({
-              success: (res) => {
-                  let userInfo = JSON.parse(res.response).response
-                  console.log(userInfo)
-              },
-              fail: (err) => {
-                  console.log(err)
-              }
-          });
-            /*setTimeout(function() {
+            
+            setTimeout(function() {
                 _my.navigateTo({
-                    url: "/pages/zhuche/zhuche"
+                    url: "/pages/login/login"
                 });
-            }, 1000);*/ // setTimeout(function () {
+            }, 1000); // setTimeout(function () {
             //     that.jer()
             // }, 1000)
 
@@ -72,38 +65,13 @@ Page({
     onLoad: function(options) {
         let that = this;
 
-        let phone = _my.getStorageSync("phone");
+        let data = my.getStorageSync({key:"jinji"});
+        let jinji = data.data
+        that.setData({
+          conrectpeople:jinji
+        })
 
-        let phone1 = _my.getStorageSync("er");
-
-        const DB = _my.cloud.database();
-
-        if (phone1) {
-            DB.collection("user")
-                .where({
-                    number: phone1
-                })
-                .get()
-                .then(res => {
-                    let data = res.data[0];
-                    that.setData({
-                        conrectpeople: data.lian,
-                        flagShow: false
-                    });
-                });
-        } else {
-            DB.collection("user")
-                .where({
-                    number: phone
-                })
-                .get()
-                .then(res => {
-                    let data = res.data[0];
-                    that.setData({
-                        conrectpeople: data.lian
-                    });
-                });
-        }
+   
     },
 
     /**
@@ -115,40 +83,15 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-        let that = this;
+      let that = this;
 
-        let phone = _my.getStorageSync("phone");
-
-        let phone1 = _my.getStorageSync("er");
-
-        const DB = _my.cloud.database();
-
-        if (phone1) {
-            DB.collection("user")
-                .where({
-                    number: phone1
-                })
-                .get()
-                .then(res => {
-                    let data = res.data[0];
-                    that.setData({
-                        conrectpeople: data.lian,
-                        flagShow: false
-                    });
-                });
-        } else {
-            DB.collection("user")
-                .where({
-                    number: phone
-                })
-                .get()
-                .then(res => {
-                    let data = res.data[0];
-                    that.setData({
-                        conrectpeople: data.lian
-                    });
-                });
-        }
+        let data = my.getStorageSync({key:"jinji"});
+        let jinji = data.data
+        console.log(data);
+        console.log(jinji);
+        that.setData({
+          conrectpeople:jinji
+        })
     },
 
     /**

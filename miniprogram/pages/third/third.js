@@ -34,11 +34,10 @@ Page({
     },
 
     onShow() {
-      let data = _my.getStorageSync({key:'user'});
-  
+      let data = my.getStorageSync({ key: 'user' });
       this.setData({
-        avatar: data.avatar,
-        name:data.name
+        avatar: data.data.avatar,
+        name:data.data.Name
       })
     },
 
@@ -77,30 +76,41 @@ Page({
                 });
             });
     },
+    feedback:function(e){
+      _my.showToast({
+        icon: "error",
+        title: "详细问题请发送到1192511920@qq.com"
+    },5000);
+    },
 
     toclient1(e) {
-        let phone = _my.getStorageSync("phone");
+      _my.showToast({
+        icon: "error",
+        title: "正在开发"
+    });
+    return
+      let that = this;
+
+
+        let phone = my.getStorage({key:"user"});
+        if(phone.success)
+        {
+          phone = phone.data
+        }
+        console.log(phone)
 
         if (!phone) {
             _my.showToast({
                 icon: "error",
-                title: "正在开发"
+                title: "请先登录"
             });
-            _my.getOpenUserInfo({
-              success: (res) => {
-                  let userInfo = JSON.parse(res.response).response
-                  console.log(userInfo)
-              },
-              fail: (err) => {
-                  console.log(err)
-              }
-          });
+            
 
-            /*setTimeout(function() {
+            setTimeout(function() {
                 _my.navigateTo({
-                    url: "/pages/zhuche/zhuche"
+                    url: "/pages/login/login"
                 });
-            }, 1000);*/ // setTimeout(function () {
+            }, 1000); // setTimeout(function () {
             //     that.jer()
             // }, 1000)
 
@@ -108,7 +118,7 @@ Page({
         } else {
             let that = this;
 
-            _my.setStorageSync("haoyou1", that.data.kefu);
+            my.setStorageSync({key:"haoyou1",data: that.data.kefu});
 
             _my.navigateTo({
                 url: "../client/client?phone=" + e.currentTarget.dataset.haoyou
@@ -117,7 +127,7 @@ Page({
     },
 
     toclient(e) {
-        _my.setStorageSync("haoyou1", e.currentTarget.dataset.phone1);
+        my.setStorageSync({key:"haoyou1", data:e.currentTarget.dataset.phone1});
 
         _my.navigateTo({
             url: "../client/client?phone=" + e.currentTarget.dataset.phone1

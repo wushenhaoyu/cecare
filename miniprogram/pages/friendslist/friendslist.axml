@@ -1,7 +1,7 @@
 <view class='page-container-classname'>
                 <view class='head-bar' style='height: {{barInfo.barH}}px; background-color: rgb(60, 152, 250); padding-top: {{barInfo.barTop}}px;width: 100%;' ref='saveChildRef0'>
   <view style='height: {{barInfo.barBtnH}}px; line-height: {{barInfo.barBtnH}}px; ' class='up'>
-    <view style="width:5%">
+    <view style="width:10%">
     </view>
     <view style='margin-left: 1vh;'>
       紧急联系人
@@ -13,18 +13,18 @@
   <view class='connect' style='justify-content: space-between;align-items: center;padding-left: 2vh;padding-right: 2vh;'>
     <view style='font-size: 27rpx;display: flex;align-items: center;justify-content: center;height: 100%;'>
       <view style='height: 27rpx;width: 108rpx;'>
-        {{item.mingz}}
+        {{item.jinji1}}
       </view>
       <view style='border-left: 5rpx solid rgb(128, 128, 128,0.3);width: 5rpx;height:40rpx;margin-left: 2vh;margin-top: 14rpx;'>
       </view>
       <view style='width:135rpx;height:27rpx;margin-left: 2vh;color: rgb(128, 128, 128,0.3);'>
-        {{item.qin}}
+        {{item.jinji3}}
       </view>
       <view style='width:100rpx;height:27rpx;margin-left: 2vh;'>
-        {{item.phone}}
+        {{item.jinji2}}
       </view>
     </view>
-    <view data-item='{{item}}' style='font-size: 27rpx;color: red;' onTap='antmoveAction' data-antmove-tap='touch'>
+    <view data-item='{{index}}' style='font-size: 27rpx;color: red;' onTap='antmoveAction' data-antmove-tap='touch'>
       管理
     </view>
   </view>

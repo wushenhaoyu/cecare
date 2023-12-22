@@ -23,14 +23,14 @@
       <view>
         姓名：
       </view>
-      <input name='jinji1' placeholder='联系人的姓名' type='text' onInput='keyInput1'>
+      <input name='jinji1' placeholder='联系人的姓名' type='text' onInput='keyInput1' >
       </input>
     </view>
     <view style='width: 75%;height: 5vh;display: flex;justify-content: center;align-items: center;border:2rpx solid rgb(121, 92, 95);border-radius: 20rpx;margin-top: 4vh;background-color: rgb(251, 252, 254);box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);'>
       <view>
         电话：
       </view>
-      <input name='jinji2' placeholder='联系人的手机号码' type='text' onInput='keyInput2'>
+      <input name='jinji2' placeholder='联系人的手机号码' type='number' onInput='keyInput2'>
       </input>
     </view>
     <view style='width: 75%;height: 5vh;display: flex;justify-content: center;align-items: center;border:2rpx solid rgb(121, 92, 95);border-radius: 20rpx;margin-top: 4vh;background-color: rgb(251, 252, 254);box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);'>
