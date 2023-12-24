@@ -69,7 +69,7 @@
   </view>
 </view><view class='box1' style='margin-top: 3vh;' onTap='antmoveAction' data-antmove-tap='toNavigate4'>
   <view>
-    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/zhixue.jpg?expire_at=1703249181&er_sign=178ec8582b5a0b9d317ee11ead3e958d' class='imagePu'>
+    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/zhixue.jpg' class='imagePu'>
     </image>
     <view style='font-size: 2vh;'>
       止血应急处理
@@ -82,7 +82,7 @@
   </view>
 </view><view class='box1' onTap='antmoveAction' data-antmove-tap='toNavigate5'>
   <view>
-    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/哮喘.jpg?expire_at=1703249155&er_sign=82fe56c9b28a0ee681a8ecef06eb5006' class='imagePu'>
+    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/%E5%93%AE%E5%96%98.jpg' class='imagePu'>
     </image>
     <view style='font-size: 2vh;'>
       哮喘应急处理
@@ -95,7 +95,7 @@
   </view>
 </view><view class='box1' onTap='antmoveAction' data-antmove-tap='toNavigate6'>
   <view>
-    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/蛇咬伤.jpg?expire_at=1703249132&er_sign=0328e5e75342c8d0ab66bb0acc2d1092' class='imagePu'>
+    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/%E8%9B%87%E5%92%AC%E4%BC%A4.jpg' class='imagePu'>
     </image>
     <view style='font-size: 2vh;'>
       蛇咬伤应急处理
@@ -108,7 +108,7 @@
   </view>
 </view><view class='box1' onTap='antmoveAction' data-antmove-tap='toNavigate7'>
   <view>
-    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/小孩烫伤.jpg?expire_at=1703248975&er_sign=1ea1436090d7afdea3705368f828462e' class='imagePu'>
+    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/%E5%B0%8F%E5%AD%A9%E7%83%AB%E4%BC%A4.jpg' class='imagePu'>
     </image>
     <view style='font-size: 2vh;'>
       烫伤应急处理
@@ -121,7 +121,7 @@
   </view>
 </view><view class='box1' onTap='antmoveAction' data-antmove-tap='toNavigate8'>
   <view>
-    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/摔倒.jpg?expire_at=1703249076&er_sign=2a2d7633b6dd3c2ffe3a7ec2e653052b' class='imagePu'>
+    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/%E6%91%94%E5%80%92.jpg' class='imagePu'>
     </image>
     <view style='font-size: 2vh;'>
       摔倒应急处理
@@ -134,7 +134,7 @@
   </view>
 </view><view class='box1' onTap='antmoveAction' data-antmove-tap='toNavigate9'>
   <view>
-    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/中风.jpg?expire_at=1703249094&er_sign=460c34666b13e5a3730bee1308d668af' class='imagePu'>
+    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/%E4%B8%AD%E9%A3%8E.jpg' class='imagePu'>
     </image>
     <view style='font-size: 2vh;'>
       中风应急处理

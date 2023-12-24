@@ -242,12 +242,12 @@ Page({
             console.log(err)
         }
     });
-      return
+      
         let that = this;
         if (this.data.logoIn) {
           console.log("登陆")
           my.yunkaifa.callFunction({
-            name:"helloworld",
+            name:"reg",
             user_name:that.data.mingz,
             password:that.data.mima,
             success:function(res)

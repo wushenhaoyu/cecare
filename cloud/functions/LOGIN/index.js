@@ -13,14 +13,12 @@ exports.main = async (event, context) => {
   {
     let message = {
       "state": 1,
-      "id": data.id,
     }
     return message;
   }
   else{
     let message = {
       "state": 0,
-      "id": 0,
     }
     return message;
   }

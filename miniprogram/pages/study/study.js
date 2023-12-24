@@ -112,6 +112,11 @@ Page({
     },
 
     aboutvolunte3() {
+      _my.showToast({
+        icon: "error",
+        title: "尚未开放，尽请期待"
+    });
+    return;
         let phone = my.getStorageSync({key:"user"});
 
         if (!phone) {

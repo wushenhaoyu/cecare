@@ -113,7 +113,7 @@
           <image src='/image/fankui2.png' style='height:60%;width:60%;'>
           </image>
         </view>
-        <view style='width: 80%;display: flex;justify-content: space-between;font-weight: 500;'>
+        <view style='width: 80%;display: flex;justify-content: space-between;font-weight: 500;' onTap="feedback">
           <view>
             <view style='font-size: 34rpx;'>
               问题反馈
