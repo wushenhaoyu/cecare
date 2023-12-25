@@ -16,19 +16,19 @@
   <custom-swiper circular='true' interval='{{3000}}'>
     <custom-swiper-item>
       <view style='display: flex;align-items: center;justify-content: center;' onTap='antmoveAction' data-antmove-tap='toNavigate1'>
-        <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/haimulike.png?expire_at=1703249210&er_sign=120f92276aaeeca02bedb7821a9ae5f0' class='imageKepu'>
+        <image src='{{img1}}' class='imageKepu'>
         </image>
       </view>
     </custom-swiper-item>
     <custom-swiper-item>
       <view style='display: flex;align-items: center;justify-content: center;' onTap='antmoveAction' data-antmove-tap='toNavigate2'>
-        <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/ertongwushi.png?expire_at=1703249253&er_sign=141d9cf99a2d4a1025420140c3804058' class='imageKepu'>
+        <image src='{{img2}}' class='imageKepu'>
         </image>
       </view>
     </custom-swiper-item>
     <custom-swiper-item>
       <view style='display: flex;align-items: center;justify-content: center;' onTap='antmoveAction' data-antmove-tap='toNavigate3'>
-        <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/futong.png?expire_at=1703249240&er_sign=60f0810c143b18b903c06535649cebc2' class='imageKepu'>
+        <image src='{{img3}}' class='imageKepu'>
         </image>
       </view>
     </custom-swiper-item>
@@ -45,21 +45,21 @@
     </view>
     <view  style='margin-top: 1vh;display: flex;justify-content: space-evenly;align-items: center;margin-bottom: 2vh;'>
       <view style='display: flex;align-items: center;justify-content: center;flex-direction: column;'>
-        <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/图片2(1).png?expire_at=1703249273&er_sign=6c30a08568992cd15c53e42147fa0113' style='width:7vh;height: 7vh;' onTap='antmoveAction' data-antmove-tap='aboutvolunte'>
+        <image src='{{img4}}' style='width:7vh;height: 7vh;' onTap='antmoveAction' data-antmove-tap='aboutvolunte'>
         </image>
         <view style='font-size: 24rpx;'>
           志愿者认证
         </view>
       </view>
       <view open-type='feedback' style='display: flex;align-items: center;justify-content: center;flex-direction: column;'>
-        <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/图片3(1).png?expire_at=1703249297&er_sign=1121be0e0451dfefa41aa83c8d6d1c8b' style='width:7vh;height: 7vh;' onTap='antmoveAction' data-antmove-tap='aboutvolunte1'>
+        <image src='{{img5}}' style='width:7vh;height: 7vh;' onTap='antmoveAction' data-antmove-tap='aboutvolunte1'>
         </image>
         <view style='font-size: 24rpx;'>
           反馈信息
         </view>
       </view>
       <view style='display: flex;align-items: center;justify-content: center;flex-direction: column;'>
-        <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/图片4(1).png?expire_at=1703249197&er_sign=b9bcf14f5a974a8fe4c2219d5dcbe42a' style='width:7vh;height: 7vh;' onTap='antmoveAction' data-antmove-tap='aboutvolunte3'>
+        <image src='{{img6}}' style='width:7vh;height: 7vh;' onTap='antmoveAction' data-antmove-tap='aboutvolunte3'>
         </image>
         <view style='font-size: 24rpx;'>
           医疗咨询
@@ -69,7 +69,7 @@
   </view>
 </view><view class='box1' style='margin-top: 3vh;' onTap='antmoveAction' data-antmove-tap='toNavigate4'>
   <view>
-    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/zhixue.jpg' class='imagePu'>
+    <image src='{{img7}}' class='imagePu'>
     </image>
     <view style='font-size: 2vh;'>
       止血应急处理
@@ -82,7 +82,7 @@
   </view>
 </view><view class='box1' onTap='antmoveAction' data-antmove-tap='toNavigate5'>
   <view>
-    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/%E5%93%AE%E5%96%98.jpg' class='imagePu'>
+    <image src='{{img8}}' class='imagePu'>
     </image>
     <view style='font-size: 2vh;'>
       哮喘应急处理
@@ -95,7 +95,7 @@
   </view>
 </view><view class='box1' onTap='antmoveAction' data-antmove-tap='toNavigate6'>
   <view>
-    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/%E8%9B%87%E5%92%AC%E4%BC%A4.jpg' class='imagePu'>
+    <image src='{{img9}}' class='imagePu'>
     </image>
     <view style='font-size: 2vh;'>
       蛇咬伤应急处理
@@ -108,7 +108,7 @@
   </view>
 </view><view class='box1' onTap='antmoveAction' data-antmove-tap='toNavigate7'>
   <view>
-    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/%E5%B0%8F%E5%AD%A9%E7%83%AB%E4%BC%A4.jpg' class='imagePu'>
+    <image src='{{img10}}' class='imagePu'>
     </image>
     <view style='font-size: 2vh;'>
       烫伤应急处理
@@ -121,7 +121,7 @@
   </view>
 </view><view class='box1' onTap='antmoveAction' data-antmove-tap='toNavigate8'>
   <view>
-    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/%E6%91%94%E5%80%92.jpg' class='imagePu'>
+    <image src='{{img11}}' class='imagePu'>
     </image>
     <view style='font-size: 2vh;'>
       摔倒应急处理
@@ -134,7 +134,7 @@
   </view>
 </view><view class='box1' onTap='antmoveAction' data-antmove-tap='toNavigate9'>
   <view>
-    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/%E4%B8%AD%E9%A3%8E.jpg' class='imagePu'>
+    <image src='{{img12}}' class='imagePu'>
     </image>
     <view style='font-size: 2vh;'>
       中风应急处理

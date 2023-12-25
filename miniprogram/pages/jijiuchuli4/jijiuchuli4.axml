@@ -26,7 +26,7 @@
     </view>
   </view>
   <view style='display: flex;justify-content: center;width: 100%;'>
-    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/6ACD609D204CFCAB57E0EB1D1AF089C1.gif?expire_at=1703087715&er_sign=29d8c8c8fda882c8d8a7f6f9e7985848' mode='heightFix' style='height:18vh;margin-top: 2vh;'>
+    <image src='{{img1}}' mode='heightFix' style='height:18vh;margin-top: 2vh;'>
     </image>
   </view>
   <view style='display: flex;justify-content: center;width: 100%;margin-top: 0vh;'>
@@ -35,7 +35,7 @@
     </view>
   </view>
   <view style='display: flex;justify-content: center;width: 100%;'>
-    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/0605071FCDEF804EF4B6270C57D773D9.gif?expire_at=1703087728&er_sign=05ec085a608aced2134a5045498824db' mode='heightFix' style='height:18vh;margin-top: 2vh;'>
+    <image src='{{img2}}' mode='heightFix' style='height:18vh;margin-top: 2vh;'>
     </image>
   </view>
   <view style='display: flex;justify-content: center;width: 100%;'>

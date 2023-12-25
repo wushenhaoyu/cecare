@@ -26,7 +26,9 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {},
+    onLoad: function(options) {
+
+    },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -36,7 +38,23 @@ Page({
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {},
+    onShow: function() {
+      var that = this
+      my.yunkaifa.getTempFileURL({
+        fileList: [
+          {  fileID: 'cloud://env-00jx4xbq2toc/6ACD609D204CFCAB57E0EB1D1AF089C1.gif', maxAge: 3600 },
+          {  fileID: 'cloud://env-00jx4xbq2toc/0605071FCDEF804EF4B6270C57D773D9.gif', maxAge: 3600 }
+        ],
+        success: (res) => {
+          let data = res.fileList
+          console.log(data)
+         this.setData({
+          img1:data[0].tempFileURL,
+          img2:data[1].tempFileURL
+         })
+        }
+      })
+    },
 
     /**
      * 生命周期函数--监听页面隐藏

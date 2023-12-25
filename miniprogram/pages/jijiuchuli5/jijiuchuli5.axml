@@ -26,7 +26,7 @@
     </view>
   </view>
   <view style='display: flex;justify-content: center;width: 100%;'>
-    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/jijiuzhidao.gif?expire_at=1703087789&er_sign=bd20aabaa2db3c63ece4d462953c7251' mode='heightFix' style='height:18vh;margin-top: 2vh;'>
+    <image src='{{img1}}' mode='heightFix' style='height:18vh;margin-top: 2vh;'>
     </image>
   </view>
 </view><view style='position: fixed;bottom: 0rpx;z-index: 999;'>

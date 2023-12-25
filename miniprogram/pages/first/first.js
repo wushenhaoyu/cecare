@@ -125,6 +125,10 @@ Page({
               accuracy: res.accuracy,
               xianc: lo
           });
+          my.setStorageSync({key:"location",data:{
+            lat:this.data.lat,
+            lon:this.data.lon
+          }})
           },
           fail: (res) => {
             _my.showModal({

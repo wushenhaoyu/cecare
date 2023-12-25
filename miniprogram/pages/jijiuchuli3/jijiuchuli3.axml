@@ -23,7 +23,7 @@
     </view>
   </view>
   <view style='display: flex;justify-content: center;width: 100%;'>
-    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/E7A1D08B88B3AB290ABE0190D82F6558.gif' mode='heightFix' style='height:18vh;margin-top: 2vh;'>
+    <image src='{{img1}}' mode='heightFix' style='height:18vh;margin-top: 2vh;'>
     </image>
   </view>
   <view style='display: flex;justify-content: center;width: 100%;margin-top: 0vh;'>
@@ -32,7 +32,7 @@
     </view>
   </view>
   <view style='display: flex;justify-content: center;width: 100%;'>
-    <image src='https://env-00jx4xbq2toc.normal.cloudstatic.cn/0386B56A9C8945DFFF96F29D3CF37D18.gif?expire_at=1703495530&er_sign=83b48688f81bccba94016d6afc94d7be' mode='heightFix' style='height:18vh;margin-top: 2vh;'>
+    <image src='{{img2}}' mode='heightFix' style='height:18vh;margin-top: 2vh;'>
     </image>
   </view>
   <view style='display: flex;justify-content: center;width: 100%;'>

@@ -1,30 +1,10 @@
 const _my = require("../../__antmove/api/index.js")(my);
-let plugin = requirePlugin("routePlan");
-let key = "DLRBZ-GKNW6-BEHSQ-MOHAV-QQNJJ-BCB3K"; //使用在腾讯位置服务申请的key
 
-let referer = "iYILIAO"; //调用插件的app的名称
-
-let endPoint = JSON.stringify({
-    //终点
-    name: "北京西站",
-    latitude: 39.894806,
-    longitude: 116.321592
-});
-import {
-    CDN_PATH,
-    MOYUAN_KEY,
-    BAIQIAN_KEY,
-    YULU_KEY,
-    DIFUNI_KEY,
-    REFERER
-} from "../../config/appConfig";
 const app = getApp();
 Page({
     data: {
-        flagTrue: true,
-        imgs: {
-            rightArrow: `${CDN_PATH}/iconArrowRight@3x.png`
-        },
+      lat:"0",
+      lon:"0",
         barInfo: app.globalData.barInfo,
         modes: [
             {
@@ -38,33 +18,6 @@ Page({
             {
                 text: "步行",
                 value: "walking"
-            }
-        ],
-        modeIndex: 0,
-        endPoint: {},
-        isNavigate: false,
-        themeColor: "#427CFF",
-        showCustomActionsheet: false,
-        showThemeColorActionsheet: false,
-        customStyles: [
-            {
-                text: "墨渊",
-                value: MOYUAN_KEY,
-                icon: `${CDN_PATH}/iconMapMoyuan@3x.png`
-            },
-            {
-                text: "白浅",
-                value: BAIQIAN_KEY,
-                icon: `${CDN_PATH}/iconMapBaiqian@3x.png`
-            },
-            {
-                text: "玉露",
-                value: YULU_KEY,
-                icon: `${CDN_PATH}/iconMapYulu@3x.png`
-            },
-            {
-                text: "自定义",
-                value: DIFUNI_KEY
             }
         ],
         themeColors: [
@@ -164,92 +117,20 @@ Page({
     },
 
     //确定后删除
-    removeList(e) {
-        let that = this;
-
-        _my.showModal({
-            content: "确定删除？",
-            complete: res => {
-                if (res.cancel) {
-                    return;
-                }
-
-                if (res.confirm) {
-                    let phone = _my.getStorageSync("phone");
-
-                    let id = e.currentTarget.dataset["e"];
-
-                    _my.cloud
-                        .database()
-                        .collection("qz")
-                        .doc(id)
-                        .remove()
-                        .then(res => {
-                            console.log("删除成功", res);
-
-                            _my.showToast({
-                                title: "删除成功"
-                            });
-                        })
-                        .catch(res => {
-                            console.error("删除失败", res);
-
-                            _my.showToast({
-                                title: "删除成功",
-                                icon: "error"
-                            });
-                        });
-
-                    const DB = _my.cloud.database();
-
-                    const _ = DB.command;
-                    DB.collection("qz")
-                        .orderBy("time", "desc")
-                        .where(
-                            _.or([
-                                {
-                                    jinji1: phone
-                                },
-                                {
-                                    jinji2: phone
-                                },
-                                {
-                                    jinji3: phone
-                                },
-                                {
-                                    jinji4: phone
-                                },
-                                {
-                                    jinji5: phone
-                                }
-                            ])
-                        )
-                        .get()
-                        .then(res => {
-                            let ss = res.data.length;
-                            let ppp = res.data;
-
-                            for (var i in ppp) {
-                                ppp[i].jb = {
-                                    name: "求救者位置",
-                                    latitude: ppp[i].lat,
-                                    longitude: ppp[i].lon
-                                };
-                            }
-
-                            that.setData({
-                                ppp: ppp
-                            });
-
-                            if (ppp[0].jinji1 != 0) {
-                                that.setData({
-                                    flagTrue: false
-                                });
-                            }
-                        });
-                }
-            }
-        });
+    demoShowRoute() {
+      console.log(this.mapCtx)
+      my.createMapContext('map').showRoute({
+        searchType:"walk",
+        startLat:30.257839, 
+        startLng:120.062726,
+        endLat:30.256718,
+        endLng:120.059985,
+        zIndex:4,
+        routeColor:'#FFB90F',
+        iconPath: "https://gw.alipayobjects.com/mdn/rms_dfc0fe/afts/img/A*EGCiTYQhBDkAAAAAAAAAAAAAARQnAQ",
+        iconWidth:10,
+        routeWidth:10
+       });
     },
 
     toNavigate() {
@@ -259,160 +140,21 @@ Page({
     },
 
     onShow() {
-        let that = this;
-
-        let phone = _my.getStorageSync("phone");
-
-        let time = new Date().getTime();
-
-        const DB = _my.cloud.database();
-
-        const _ = DB.command;
-        DB.collection("qz")
-            .orderBy("time", "desc")
-            .where(
-                _.or([
-                    {
-                        jinji1: phone
-                    },
-                    {
-                        jinji2: phone
-                    },
-                    {
-                        jinji3: phone
-                    },
-                    {
-                        jinji4: phone
-                    },
-                    {
-                        jinji5: phone
-                    }
-                ])
-            )
-            .get()
-            .then(res => {
-                let ss = res.data.length;
-                let ppp = res.data;
-
-                for (var i in ppp) {
-                    ppp[i].jb = {
-                        name: "求救者位置",
-                        latitude: ppp[i].lat,
-                        longitude: ppp[i].lon
-                    };
-                }
-
-                that.setData({
-                    ppp: ppp
-                });
-
-                if (ppp[0].jinji1 != 0) {
-                    that.setData({
-                        flagTrue: false
-                    });
-                }
-            });
+        let data = my.getStorageSync({key:'location'})
+        if(data.success)
+        {
+          data = data.data
+        }
+        console.log(data)
+        this.setData({
+          lat:data.lat,
+          lon:data.lon
+        })
+        this.demoShowRoute()
     },
 
     onLoad(options) {
-        let that = this;
-
-        let phone = _my.getStorageSync("phone");
-
-        let time = new Date().getTime();
-
-        const DB = _my.cloud.database();
-
-        const _ = DB.command;
-        DB.collection("qz")
-            .orderBy("time", "desc")
-            .where(
-                _.or([
-                    {
-                        jinji1: phone
-                    },
-                    {
-                        jinji2: phone
-                    },
-                    {
-                        jinji3: phone
-                    },
-                    {
-                        jinji4: phone
-                    },
-                    {
-                        jinji5: phone
-                    }
-                ])
-            )
-            .get()
-            .then(res => {
-                let ss = res.data.length;
-                let ppp = res.data;
-
-                for (var i in ppp) {
-                    ppp[i].jb = {
-                        name: "求救者位置",
-                        latitude: ppp[i].lat,
-                        longitude: ppp[i].lon
-                    };
-                }
-
-                that.setData({
-                    ppp: ppp
-                }); //   let data = res.data[ss - 1]
-                //   let time2 =data.time
-                //   let lon=data.lon
-                //   let lat=data.lat
-                // let jb = {
-                //     name: '求救者位置',
-                //     latitude: lat,
-                //     longitude: lon
-                // }
-                // that.setData({
-                //     endPoint: jb
-                // })
-            });
-    },
-
-    onChooseStartPoint() {
-        const key = this.data.customStyles[this.data.keyIndex].value;
-        this.setData({
-            chooseType: "start"
-        });
-        chooseLocation.setLocation(null);
-
-        if (!key || !REFERER) {
-            console.error("请输入有效的key和referer");
-            return;
-        }
-
-        const url =
-            "plugin://chooseLocation/index?key=" + key + "&referer=" + REFERER;
-
-        _my.navigateTo({
-            url
-        });
-    },
-
-    onChooseEndPoint() {
-        const key = this.data.customStyles[this.data.keyIndex].value;
-        this.setData({
-            chooseType: "end"
-        });
-        chooseLocation.setLocation(null);
-
-        if (!key || !REFERER) {
-            console.error("请输入有效的key和referer");
-            return;
-        }
-
-        const url =
-            "plugin://chooseLocation/index?key=" + key + "&referer=" + REFERER;
-
-        _my.navigateTo({
-            url
-        });
+      this.mapCtx = my.createMapContext('map');
     },
 
     onSelectMode(event) {

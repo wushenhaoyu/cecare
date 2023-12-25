@@ -123,13 +123,40 @@ Page({
          
             this.setData({
               avatar:userInfo.avatar,
-              name:userInfo.nickName
+              name:userInfo.nickName,
+            })
+            my.yunkaifa.callFunction({
+              name:"LOGIN",
+              data:
+              {
+                user_name:this.data.user_name,
+            },
+              success:function(res)
+              {
+                console.log(res)
+              },
+              fail:function(res){
+                console.log(res)
+              }
             })
           },
           fail: (err) => {
               console.log(err)
           }
       });
+      my.getPhoneNumber({
+        success: (res) => {
+          let encryptedData = res.response;
+          console.log(encryptedData)
+          this.setData({
+            phone:encryptedData
+          })
+        },
+        fail: (res) => {
+          console.log(res);
+        },
+      });
+    
   },
   feedback:function(e){
     _my.showModal({

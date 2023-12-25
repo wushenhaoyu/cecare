@@ -36,7 +36,21 @@ Page({
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {},
+    onShow: function() {
+      var that = this
+      my.yunkaifa.getTempFileURL({
+        fileList: [
+          {  fileID: 'cloud://env-00jx4xbq2toc/jijiuzhidao.gif', maxAge: 3600 }
+        ],
+        success: (res) => {
+          let data = res.fileList
+          console.log(data)
+         this.setData({
+          img1:data[0].tempFileURL
+         })
+        }
+      })
+    },
 
     /**
      * 生命周期函数--监听页面隐藏

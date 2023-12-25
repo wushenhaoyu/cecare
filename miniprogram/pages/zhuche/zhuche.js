@@ -253,82 +253,12 @@ Page({
             success:function(res)
             {
               console.log(res)
-              /*if (res.result[0].mima == that.data.ium) {
-                //登录成功
-                _my.showToast({
-                    icon: "none",
-                    title: "登录成功"
-                });
-
-                _my.setStorageSync("phone", res.data[0].number);
-
-                _my.setStorageSync("minz", res.data[0].name);
-
-                setTimeout(function() {
-                    _my.switchTab({
-                        url: "/pages/login/login"
-                    });
-                }, 1000); // 延迟1秒执行
-            } else {
-                _my.showToast({
-                    icon: "none",
-                    title: "密码错误"
-                });
-
-                return 0;
-            }*/
             },
             fail:function(res){
-              /*_my.showToast({
-                icon: "none",
-                title: "您还未注册"
-            });*/
+
             }
           })
-           /* const DB = _my.cloud.database();
-
-            DB.collection("user")
-                .where({
-                    name: that.data.uiop
-                })
-                .get()
-                .then(res => {
-                    let flag = res.data.length;
-
-                    if (flag == 0) {
-                        // 未注册
-                        _my.showToast({
-                            icon: "none",
-                            title: "您还未注册"
-                        });
-                    } else {
-                        if (res.data[0].mima == that.data.ium) {
-                            //登录成功
-                            _my.showToast({
-                                icon: "none",
-                                title: "登录成功"
-                            });
-
-                            _my.setStorageSync("phone", res.data[0].number);
-
-                            _my.setStorageSync("minz", res.data[0].name);
-
-                            setTimeout(function() {
-                                _my.switchTab({
-                                    url: "/pages/login/login"
-                                });
-                            }, 1000); // 延迟1秒执行
-                        } else {
-                            _my.showToast({
-                                icon: "none",
-                                title: "密码错误"
-                            });
-
-                            return 0;
-                        }
-                    }
-                });
-            return;*/
+ 
         }
 
         if (!this.data.logoIn) {
