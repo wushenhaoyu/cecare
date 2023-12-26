@@ -4,24 +4,23 @@
     <view style="width:5%">
     </view>
     <view style='margin-left: 3vh; font-size: 28rpx;'>
-      求救人列表
+      搜救导航
     </view>
   </view>
 </view><view style='height:{{barInfo.barH}}px;'>
 </view><view class='cu-bar search bg-white'>
   <view class='search-form round'>
     <text class='cuIcon-search'>
-    </text>    <input type='text' placeholder='搜索求救人名称' confirm-type='search' onInput='searchDataInput'>
+    </text>    <input type='text' placeholder='搜索求救人编号' confirm-type='search' onInput='searchDataInput'>
     </input>
   </view>  <view class='action'>
-    <btn class='cu-btn bg-blue shadow-blur round' style='width: 150rpx;' onTap='antmoveAction' data-antmove-tap='searchData'>
+    <btn class='cu-btn bg-blue shadow-blur round' style='width: 150rpx;' onTap='antmoveAction' data-antmove-tap='search'>
       搜索
     </btn>
   </view>
 </view>
-<map longitude="{{lon}}" latitude="{{lat}}" show-location="{{true}}" style="width:100%;height:70vh" show-compass={{true}}></map>
-<view style="width:100vw"><button size="default" type="primary" style="background-color:green;color:white" onTap="demoShowRoute">导航</button></view>
-
+<map show-location="{{true}}" longitude="120.10675" latitude="30.266786" style="width:100%;height:70vh" show-compass={{true}}></map>
+<view style="width:100vw"><button size="default" type="primary" style="background-color:green;color:white" onTap="demoShowRoute"  markers="{{markers}}">导航</button></view>
 <!--<view a:for='{{ppp}}' class='cu-list menu-avatar' ref-numbers='{{ppp}}'>
   <view class='cu-item' style='height: 12vh;'>
     <view class='cu-avatar round lg' style='background-image:url(https://636c-cloud1-1ggve6rwd2654275-1309155985.tcb.qcloud.la/logo.png?sign=7e910917848a87507d437f56257740b6&t=1682863151);'>

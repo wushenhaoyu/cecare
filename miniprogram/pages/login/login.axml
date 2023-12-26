@@ -119,3 +119,21 @@
   </view>
 </view>
             </view>
+<view a:if="{{ isShowPhone }}" style="position:absolute;left:0;top:0;z-index:10;width:100vw;height:100vh;background-color:rgb(0,0,0,0.6)">
+<view>
+<view style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:10;width:80vw">
+<view style="font-weight:800;font-size:5vw;height:5vh;width:100%;background-color:rgb(60,152,250);text-align:center;line-height:5vh;color:white;font-size:larger;border-top-left-radius:1vh;border-top-right-radius:1vh">
+  绑定你的手机号
+</view>
+<view style="height:15vh;width:100%;background-color:rgb(255,255,255);text-align:center;border-bottom-left-radius:1vh;border-bottom-right-radius:1vh;justify-content: center;">
+ <view style="display:flex;justify-content:space-between;line-height:8vh;font-weight:800;font-size:5vw;padding-left:2vw;padding-right:2vw">
+  手机号:
+  <input placeholder="在此输入你的手机号" maxlength= "11"  type="number" style="height:8vh;" onInput="phoneIntput" />
+ </view> 
+ <view>
+   <button open-type="getAuthorize"scope="phoneNumber"onGetAuthorize="getPhoneNumber" size="default" type="ghost" style="border-width:0;width:60%;background-color:rgb(60,152,250);color:white;font-weight:800;font-size:5vw;" >提 交</button>
+ </view>
+</view>
+</view>
+</view>
+</view>

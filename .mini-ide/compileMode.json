@@ -28,6 +28,18 @@
       "title": "s",
       "page": "pages/first/first",
       "launchMode": "common"
+    },
+    {
+      "title": "pages/login/login",
+      "page": "pages/login/login",
+      "launchMode": "common",
+      "pageQuery": ""
+    },
+    {
+      "title": "pages/location/location",
+      "page": "pages/location/location",
+      "launchMode": "common",
+      "pageQuery": ""
     }
   ]
 }

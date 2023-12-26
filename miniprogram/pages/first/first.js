@@ -79,13 +79,8 @@ Page({
     },
 
     toVisitHomepage() {
-      console.log('zhuce')
-        _my.showTabBar({
-            animation: true
-        }),
-            this.setData({
-                flagFalse: true
-            });
+      var that = this
+      that.getLocation()
     },
 
     toNavigateto() {
@@ -112,6 +107,9 @@ Page({
     },
 
     getLocation: function() {
+      my.hideTabBar({
+        animation: true,
+      })
         var that = this;
         my.getLocation({
           type: 2, // 获取经纬度和省市区县数据
@@ -129,12 +127,18 @@ Page({
             lat:this.data.lat,
             lon:this.data.lon
           }})
+          my.showTabBar({
+            animation: true,
+          })
+          that.setData({
+            flagFalse:true
+          })
           },
           fail: (res) => {
             _my.showModal({
               title: "授权提示",
               content:
-                  "小程序需要您的微信授权才能使用哦~ 错过授权页面的处理方法：删除小程序->重新搜索进入->点击授权按钮"
+                  "小程序需要您的授权才能使用哦"
           });
           },
           complete: () => {},
@@ -143,7 +147,11 @@ Page({
     },
 
     ceshi() {
-        let phone = _my.getStorageSync("phone");
+        let data = _my.getStorageSync({key:"phone"});
+        if(data.success)
+        {
+          phone =data.data.phone
+        }
 
         let i = 0;
         let that = this;
@@ -161,176 +169,55 @@ Page({
                     console.log("用户点击确定");
                     let time = new Date().getTime();
                     let myTime = util.formatTime(new Date(time));
+                    my.getLocation({
+                      type: 2, // 获取经纬度和省市区县数据
+                      success: (res) => {
+                        console.log(res)
+                        var lo = res.province + res.city + res.district + res.streetNumber.street + res.streetNumber.number
+                        that.setData({
+                          lat: res.latitude,
+                          lon: res.longitude,
+                          speed: res.speed,
+                          accuracy: res.accuracy,
+                          xianc: lo
+                      });
+                      const uniqueId = 'id-' + new Date().getTime().toString(36) + '-' + Math.random().toString(36).substr(2, 9);
+                      console.log(uniqueId)
+                      
 
-                    if (that.data.guo) {
-                        for (i = 1; i <= that.data.lian.length; i++) {
-                            _my.cloud.callFunction({
-                                name: "sendsms",
-                                data: {
-                                    mobile: that.data.lian[i - 1].phone,
-                                    nationcode: "86"
-                                },
-                                success: res => {
-                                    console.log("[云函数] [sendsms] 调用成功");
-                                    console.log(res);
-                                },
-                                fail: err => {
-                                    console.error(
-                                        "[云函数] [sendsms] 调用失败",
-                                        err
-                                    );
-                                }
-                            });
-                        }
-                    }
-
-                    _my.getLocation({
-                        success: function(res) {
-                          var lo =res.province+ res.city + res.district
-                          console.log(lo)
-                            that.setData({
-                                lat: res.latitude,
-                                lon: res.longitude,
-                                speed: res.speed,
-                                accuracy: res.accuracy,
-                                xianc: lo
-                            });
-
-                            const DB = _my.cloud.database();
-
-                            DB.collection("user")
-                                .where({
-                                    number: phone
-                                })
-                                .get()
-                                .then(res => {
-                                    let data = res.data[0];
-                                    that.setData({
-                                        name: data.name,
-                                        dizhi: data.geren.dizhi,
-                                        jinji: data.lian,
-                                        bing: data.geren.msg
-                                    });
-                                    let jj = [];
-
-                                    for (
-                                        i = 1;
-                                        i <= that.data.jinji.length;
-                                        i++
-                                    ) {
-                                        jj[i - 1] =
-                                            that.data.jinji[i - 1].phone;
-                                    }
-
-                                    DB.collection("qz").add({
-                                        data: {
-                                            time: time,
-                                            mytime: myTime,
-                                            lat: that.data.lat,
-                                            lon: that.data.lon,
-                                            dizhi: that.data.dizhi,
-                                            name: that.data.name,
-                                            phone: phone,
-                                            bing: that.data.bing,
-                                            jinji1: jj[0],
-                                            jinji2: jj[1],
-                                            jinji3: jj[2],
-                                            jinji4: jj[3],
-                                            jinji5: jj[4]
-                                        },
-
-                                        success(res) {
-                                            console.log(res);
-
-                                            _my.makePhoneCall({
-                                                phoneNumber: "120",
-                                                success: function() {
-                                                    console.log(
-                                                        "拨打电话成功！"
-                                                    );
-                                                },
-                                                fail: function() {
-                                                    console.log(
-                                                        "拨打电话失败！"
-                                                    );
-                                                }
-                                            });
-                                        }
-                                    });
-                                    that.setData({
-                                        duanxin: true
-                                    });
-                                });
+                      my.yunkaifa.callFunction({
+                        name:"updateLocation",
+                        data:{
+                          user_name:that.data.name,
+                          lat:that.data.lat,
+                          lon:that.data.lon,
+                          locationId:uniqueId
                         },
-                        fail: function(res) {
-                            const DB = _my.cloud.database();
-
-                            DB.collection("user")
-                                .where({
-                                    number: phone
-                                })
-                                .get()
-                                .then(res => {
-                                    let data = res.data[0];
-                                    that.setData({
-                                        name: data.name,
-                                        dizhi: data.geren.dizhi,
-                                        jinji: data.lian,
-                                        bing: data.geren.msg
-                                    });
-                                    let jj = [];
-
-                                    for (
-                                        i = 1;
-                                        i <= that.data.jinji.length;
-                                        i++
-                                    ) {
-                                        jj[i - 1] =
-                                            that.data.jinji[i - 1].phone;
-                                    }
-
-                                    DB.collection("qz").add({
-                                        data: {
-                                            time: time,
-                                            mytime: myTime,
-                                            lat: that.data.lat,
-                                            lon: that.data.lon,
-                                            dizhi: that.data.dizhi,
-                                            name: that.data.name,
-                                            phone: phone,
-                                            bing: that.data.bing,
-                                            jinji1: jj[0],
-                                            jinji2: jj[1],
-                                            jinji3: jj[2],
-                                            jinji4: jj[3],
-                                            jinji5: jj[4]
-                                        },
-
-                                        success(res) {
-                                            console.log(res);
-
-                                            _my.makePhoneCall({
-                                                phoneNumber: "120",
-                                                success: function() {
-                                                    console.log(
-                                                        "拨打电话成功！"
-                                                    );
-                                                },
-                                                fail: function() {
-                                                    console.log(
-                                                        "拨打电话失败！"
-                                                    );
-                                                }
-                                            });
-                                        }
-                                    });
-                                });
+                        success(res)
+                        {
+                          console.log(res)
+                          my.makePhoneCall({
+                            number: '120',
+                            success: function(res) {
+                              console.log(res);  //{"success": true}
+                            },
+                            fail: function(err) {
+                              console.log(err);
+                            }
+                          });
+                          //写发送信息的
+                          
                         }
-                    }); //fdfsf
-
-                    that.setData({
-                        shifou: false
+                      })
+                      my.setStorageSync({key:"location",data:{
+                        lat:that.data.lat,
+                        lon:that.data.lon
+                      }})
+                      },
                     });
+              
+                    
+
                 } else {
                     //这里是点击了取消以后
                     that.setData({
@@ -404,21 +291,6 @@ Page({
     onLoad: function() {
         let that = this;
 
-        let phone = _my.getStorageSync("phone");
-
-        if (phone) {
-            that.setData({
-                flagFalse: true
-            });
-
-            _my.showTabBar({
-                animation: true
-            });
-        } else {
-            _my.hideTabBar({
-                animation: false
-            });
-        }
 
         setTimeout(function() {
             that.setData({

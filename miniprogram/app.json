@@ -48,7 +48,9 @@
 		"pages/location1/location1"
 	],
 	"window": {
-    "transparentTitle": "always"
+    "transparentTitle": "always",
+    "pullRefresh":false,
+    "allowsBounceVertical":"NO"
     
 	},
 	"tabBar": {

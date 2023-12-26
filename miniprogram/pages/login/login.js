@@ -17,7 +17,73 @@ Page({
         toggleDelay: false,
         showNotice: false,
         animation: "",
-        noneCarton: ""
+        noneCarton: "",
+        isShowPhone:false
+    },
+    phoneIntput:function(e)
+    {
+      let that = this;
+      this.setData({
+        phone: e.detail.value,
+      });
+    },
+    confirmPhone:function(e){
+      let that = this
+      console.log(that.data.phone,that.data.phone.length)
+      if(that.data.phone.length != 11)
+      {
+        my.showToast({
+          content:"不正确的手机号"
+        })
+        return;
+      }
+      else{
+        console.log(that.data.name)
+        my.yunkaifa.callFunction({
+          name:"addPhoneNumber",
+          data:{
+            phoneNumber:that.data.phone,
+            user_name:that.data.name
+          },
+          success(res){
+            if(res.result.status)
+            {
+              my.setStorageSync({key:'phone',data:{
+                phone:that.data.phone
+              }})
+              that.setData({
+                isShowPhone:false
+            });
+            my.showTabBar({
+              animation:true
+            })
+            my.showToast({
+              content:"绑定成功"
+            })
+            }
+            else{
+              my.showToast({
+                content:"提交失败，请重试"
+              })
+              return
+            }
+          }
+
+        })
+        
+      }
+    }
+    ,
+    getPhoneNumber() {
+      my.getPhoneNumber({
+        success: (res) => {
+          let encryptedData = res.response;
+          this.confirmPhone()
+        },
+        fail: (res) => {
+          console.log(res);
+        },
+      });
     },
 
     carton() {
@@ -98,8 +164,12 @@ Page({
 
         that.setData({
             name:"",
-            avatar:""
+            avatar:"",
+            isShowPhone:false
         });
+        my.showTabBar({
+          animation:true
+        })
     },
 
     toclient() {
@@ -108,6 +178,7 @@ Page({
         });
     },
     getOpenUserInfo() {
+      var that = this
       _my.getOpenUserInfo({
           success: (res) => {
               let userInfo = JSON.parse(res.response).response
@@ -119,42 +190,68 @@ Page({
                 avatar:userInfo.avatar
               },
               key: "user",
-            });
-         
-            this.setData({
-              avatar:userInfo.avatar,
-              name:userInfo.nickName,
-            })
-            my.yunkaifa.callFunction({
-              name:"LOGIN",
-              data:
-              {
-                user_name:this.data.user_name,
-            },
-              success:function(res)
-              {
-                console.log(res)
-              },
-              fail:function(res){
-                console.log(res)
+              success(res){
+                
+                that.setData({
+                  avatar:userInfo.avatar,
+                  name:userInfo.nickName,
+                })
+                my.yunkaifa.callFunction({
+                  name:"register",
+                  data:{
+                    user_name:userInfo.nickName
+                  },
+                  success(res)
+                  {
+                    console.log("注册成功")
+                    console.log(res.result)
+                    my.yunkaifa.callFunction({
+                      name:"checkUser",
+                      data:
+                      {
+                        user_name:userInfo.nickName,
+                      },
+                      success(res)
+                      {
+                        console.log(res,"checkUser")
+                        if(res.result.status)
+                        {
+                          my.yunkaifa.callFunction({
+                            name:"getUserInfo",
+                            data:{
+                              user_name:userInfo.nickName,
+                            },
+                            success(res){
+                              my.setStorageSync({key:'phone',data:{
+                                phone:res.result.phoneNumber
+                              }})
+                            }
+                          })
+                        }
+                        else{
+                          that.setData({
+                            isShowPhone:true
+                          })
+                          my.hideTabBar({
+                            animation:true
+                          })
+                        }
+                      },
+                      fail:function(res){
+                        console.log(res)
+                      }
+                    })
+                  }
+                })
+               
               }
-            })
+            });
+           
+            
           },
           fail: (err) => {
               console.log(err)
           }
-      });
-      my.getPhoneNumber({
-        success: (res) => {
-          let encryptedData = res.response;
-          console.log(encryptedData)
-          this.setData({
-            phone:encryptedData
-          })
-        },
-        fail: (res) => {
-          console.log(res);
-        },
       });
     
   },
