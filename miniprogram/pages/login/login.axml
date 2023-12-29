@@ -97,7 +97,7 @@
       怡心守护小程序
     </view>
     <view style='color: #999999 !important; '>
-      Elite团队技术支持
+      Bravo团队技术支持
     </view>
   </view>
 </view><view a:if='{{showNotice}}' style='z-index: 999;position: absolute;top: 13vh;width: 100%;'>
@@ -110,7 +110,7 @@
             </text>            关于我们：
           </view>
         </view>        <text decode='{{true}}' style='height: 48vh;width: 100%;padding: 0vh;text-align: start;line-height: 3vh;'>
-          &nbsp;&nbsp;&nbsp;&nbsp;我们怡心守护团队是一个致力于运用前沿科技技术助力改善目前急救方式的团队。我们基于微信小程序的急救小程序可面向各类人群，利用微信小程序一键呼救和脚部感知技术为使用者提供双重保险，联通使用者-志愿者-医生三方，提高急救效率及成功率。团队已经组建一年有余，我们有信心能够让科技落地，服务广大民众。\n\n&nbsp;&nbsp;&nbsp;&nbsp;相较于该领域已有软件，我们的联通人群更广，兼具一键求救，脚部压力感知技术，医疗知识科普，急救导航，病史提供，志愿服务，邻里互助等多项功能。“怡心守护”小程序整合多方资源，为紧急联系人、120平台、志愿者群体提供求救者求救信息和健康档案，使得这些人力资源得到充分的利用，并添加导航与急救指导等功能，从而及时对求救者进行医学救治。同时，我们的团队与富有经验的医学专家交流沟通，以保证医疗科普，急救指导等内容的正确性。\n\n&nbsp;&nbsp;&nbsp;&nbsp;我们团队的小程序能够助力急救服务的发展，提高患者获救概率，助力“智慧医疗”事业的发展！        </text>        <view class='cu-list grid col-3' style='display: flex;align-items: center;justify-content: center;margin-top: 15vh;height: 4vh;' onTap='antmoveAction' data-antmove-tap='carton'>
+          &nbsp;&nbsp;&nbsp;&nbsp;我们怡心守护团队是一个致力于运用前沿科技技术助力改善目前急救方式的团队。我们基于支付宝小程序的急救小程序可面向各类人群，利用支付宝小程序一键呼救为使用者提供双重保险，联通使用者-志愿者-医生三方，提高急救效率及成功率。团队已经组建一年有余，我们有信心能够让科技落地，服务广大民众。\n\n&nbsp;&nbsp;&nbsp;&nbsp;相较于该领域已有软件，我们的联通人群更广，兼具一键求救，医疗知识科普，急救导航，病史提供，志愿服务，邻里互助等多项功能。“怡心守护”小程序整合多方资源，为紧急联系人、120平台、志愿者群体提供求救者求救信息和健康档案，使得这些人力资源得到充分的利用，并添加导航与急救指导等功能，从而及时对求救者进行医学救治。同时，我们的团队与富有经验的医学专家交流沟通，以保证医疗科普，急救指导等内容的正确性。\n\n&nbsp;&nbsp;&nbsp;&nbsp;我们团队的小程序能够助力急救服务的发展，提高患者获救概率，助力“智慧医疗”事业的发展！        </text>        <view class='cu-list grid col-3' style='display: flex;align-items: center;justify-content: center;margin-top: 15vh;height: 4vh;' onTap='antmoveAction' data-antmove-tap='carton'>
           <text class='cuIcon-unfold lg text-black' style='font-size: 60rpx;'>
           </text>
         </view>

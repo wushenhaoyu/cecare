@@ -182,7 +182,7 @@ Page({
       _my.getOpenUserInfo({
           success: (res) => {
               let userInfo = JSON.parse(res.response).response
-              console.log(userInfo.nickName)
+              console.log(userInfo)
               
            let s = my.setStorage({
               data: {

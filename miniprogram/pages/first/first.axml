@@ -92,12 +92,12 @@
     <text class=' text-bold text-black'>
       不知道该怎么办？    </text>    <text class='text-gray' style='font-size: 2vh;'>
       选择下方指导    </text>
-  </view>    <scroll-view scroll-x="true" style="width: 750rpx;height: 12vh;margin-top: 2vh;white-space:nowrap;">
+  </view>    <scroll-view scroll-x="true" style="width: 750rpx;height:14vh;margin-top: 2vh;white-space:nowrap;">
  
     <navigator a:for="{{toShowStruct}}" url="{{item.url}}" class="shadow-warp bg-white displayAll view_first" style="width: 300rpx;height:100%;display:inline-block;margin-left: 1vh;margin-right: 1vh;padding:2vh;">
             <view class="cu-bar" style="min-height: 0rpx;">
                 <view class="action sub-title">
-                    <text class="text-xl text-bold text-black">{{item.name}}</text>
+                    <text class=" text-black" style="font-size:4vw;font-weight:1000">{{item.name}}</text>
                     <text class="text-ABC text-gray">{{item.secondName}}</text>
                     <!-- last-child选择器-->
                 </view>
